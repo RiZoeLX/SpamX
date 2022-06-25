@@ -1,3 +1,9 @@
+# RiZoeL X - Telegram Projects
+# (c) 2022 - 2023 RiZoeL
+# Don't Kang Bitch -!
+
+
+
 
 import os
 import sys
