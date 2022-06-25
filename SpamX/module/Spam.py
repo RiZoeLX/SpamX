@@ -114,7 +114,7 @@ async def delayspam(xspam: Client, e: Message):
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["pornspam"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["pornspam"], prefixes=HNDLR))
 async def pornspam(xspam: Client, e: Message): 
-    counts = e.command[1]
+    counts = e.command[0]
     if not counts:
         return await e.reply_text(usage)
     if int(e.chat.id) in GROUP:
