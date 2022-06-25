@@ -1,6 +1,6 @@
 # RiZoeL X - Telegram Projects
 # (c) 2022 - 2023 RiZoeL
-# Dont Kang Bitch -! 
+# Don't Kang Bitch -! 
 
 
 
