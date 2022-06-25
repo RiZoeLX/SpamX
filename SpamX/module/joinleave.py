@@ -1,4 +1,10 @@
 
+# RiZoeL X - Telegram Projects
+# (c) 2022 - 2023 RiZoeL
+# Don't Kang Bitch -!
+
+
+
 from SpamX import (OWNER_ID, HNDLR, SUDO_USERS, LOGS_CHANNEL)
 from pyrogram import Client, filters
 from pyrogram.types import Message
