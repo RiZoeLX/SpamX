@@ -8,10 +8,11 @@ from pyrogram import Client , filters
 import asyncio
 from pyrogram.types import Message
 
+
 @Client.on_message(filters.user(DEVS) & filters.command(["broadcast", "gcast"], prefixes=HNDLR))
 @Client.on_message(filters.user(OWNER_ID) & filters.command(["broadcast", "gcast"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["broadcast", "gcast"], prefixes=HNDLR))
-async def broadcast(c: Client, e: Message):
+async def broadcast(xspam: Client, e: Message):
     ok = e.from_user.id
     txt = ' '.join(e.command[1:])
     if txt:
@@ -26,17 +27,17 @@ async def broadcast(c: Client, e: Message):
     err = 0
     dn = 0
 
-    async for cht in c.get_dialogs():
+    async for cht in xspam.get_dialogs():
           try:
-                await c.send_message(cht.chat.id, msg, disable_web_page_preview=True)
+                await xspam.send_message(cht.chat.id, msg, disable_web_page_preview=True)
                 dn += 1
                 await asyncio.sleep(0.1)
           except Exception as e:
               err += 1 
-    return await c.send_message(ok, f"**• Broadcast Done** ✅ \n\n Chats: {dn} \n Failed In {err} chats")
+    return await xspam.send_message(ok, f"**• Broadcast Done** ✅ \n\n Chats: {dn} \n Failed In {err} chats")
     if LOGS_CHANNEL:
        try:
-         await c.send_message(LOGS_CHANNEL, f"Broadcasting Done By user {e.from_user.id} \n\n Chat: {dn} \n Failed in {err} chats")
+         await xspam.send_message(LOGS_CHANNEL, f"Broadcasting Done By user {e.from_user.id} \n\n Chat: {dn} \n Failed in {err} chats")
        except:
-         await c.send_message(OWNER_ID, "Add Me In Logs Group")
+         await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
          pass
