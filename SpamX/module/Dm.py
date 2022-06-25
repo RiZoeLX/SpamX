@@ -73,7 +73,8 @@ async def dmraid(xspam: Client, e: Message):
 async def dm(xspam: Client, e: Message):
       Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
       if len(Rizoel) == 2:
-          ok = await xspam.get_users(Rizoel[0])
+          usr = str(Rizoel[0])
+          ok = await xspam.get_users(usr)
           id = ok.id
           if int(id) in RiZoeLX:
                 text = f"I can't raid on @RiZoeLX's Owner"
