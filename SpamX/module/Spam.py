@@ -9,7 +9,7 @@ import sys
 import asyncio
 import re
 from random import choice
-from SpamX import (HNDLR, SUDO_USERS, OWNER_ID, LOGS_CHANNNEL)
+from SpamX import (HNDLR, SUDO_USERS, OWNER_ID, LOGS_CHANNEL)
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from SpamX.data import *
