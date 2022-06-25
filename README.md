@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="SpamX/RiZoeL.png" alt="RiZoeLXSpam Logo">
+  <img src="/SpamX/RiZoeL.png" alt="RiZoeLXSpam Logo">
 </p>
 <h1 align="center">
   <b>• SpamX •</b>
@@ -45,7 +45,7 @@
 ----
 
 <h3 align="center"> String Session </h3>
-- Click On Below Button To Expand 
+> Click On Below Button To Expand 
 
 <details>
 <summary><b> Session </b></summary>
