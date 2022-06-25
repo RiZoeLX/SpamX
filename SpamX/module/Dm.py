@@ -64,9 +64,9 @@ async def dmraid(xspam: Client, e: Message):
           await xspam.reply_text(Usage)
       if LOGS_CHANNEL:
          try:
-            await c.send_message(LOGS_CHANNEL, f"started DM Raid By User: {e.from_user.id} \n\n On User: {id} \n Counts: {counts}")
+            await xspam.send_message(LOGS_CHANNEL, f"started DM Raid By User: {e.from_user.id} \n\n On User: {id} \n Counts: {counts}")
          except:
-            await c.send_message(OWNER_ID, "Add Me In Logs Group")
+            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
          
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["dm"], prefixes=HNDLR))
@@ -109,9 +109,9 @@ async def dm(xspam: Client, e: Message):
           await xspam.reply_text(Usage)
       if LOGS_CHANNEL:
          try:
-            await c.send_message(LOGS_CHANNEL, f"Direct Message By User: {e.from_user.id} \n\n On User: {id}")
+            await xspam.send_message(LOGS_CHANNEL, f"Direct Message By User: {e.from_user.id} \n\n On User: {id}")
          except:
-            await c.send_message(OWNER_ID, "Add Me In Logs Group")
+            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
 
 
@@ -163,7 +163,7 @@ async def dmspam(xspam: Client, e: Message):
           await xspam.reply_text(Usage)
       if LOGS_CHANNEL:
          try:
-            await c.send_message(LOGS_CHANNEL, f"started DM Spam By User: {e.from_user.id} \n\n On User: {id} \n Counts: {counts} \n Message: {msg}")
+            await xspam.send_message(LOGS_CHANNEL, f"started DM Spam By User: {e.from_user.id} \n\n On User: {id} \n Counts: {counts} \n Message: {msg}")
          except:
-            await c.send_message(OWNER_ID, "Add Me In Logs Group")
+            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
