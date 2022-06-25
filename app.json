@@ -1,0 +1,165 @@
+{
+      "name": "SpamX - RiZoeL",
+      "description": "a Pyrogram Based Span Bots With Many Cmds Fast And Stable",
+      "logo": "https://telegra.ph/file/ec832fc9107fd21edfee3.jpg",
+      "keywords": [
+        "telegram",
+        "PYROGRAM",
+        "telegram-bot",
+        "RiZoeLXSpam",
+        "SpamBots"
+      ],   
+  "repository": "https://github.com/MrRizoel",
+  "website": "https://github.com/RiZoeLX",
+  "success_url": "https://t.me/RiZoeLX",
+  "env": {
+             "API_ID": {
+        "description": "Fill Api ID Take this value from My.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "ALIVE_PIC": {
+        "description": "your alive pic or video",
+        "value": "",
+        "required": false
+      },
+      "API_HASH": {
+        "description": "Fill Api hash Take this value from My.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "SESSION": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": true
+      },
+      "SESSION2": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION3": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION4": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION5": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION6": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION7": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION8": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION9": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION10": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION11": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION12": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION13": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION14": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION15": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION16": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION17": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION18": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION19": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },
+      "SESSION20": {
+        "description": "PYROGRAM SESSION Session",
+        "value": "",
+        "required": false
+      },      
+       "SUDO_USER": {
+            "description": "Sudo users id space by space or leave blank",
+            "value": "",
+            "required": false
+        },
+      "OWNER_ID": {
+            "description": "Sudo users id space by space",
+            "value": "",
+            "required": true
+        },
+      "LOGS_CHANNEL": {
+            "description": "Logs Group ID (Make A Private Group And Add Your All Spam id Their)",
+            "value": "",
+            "required": false
+        },
+      "HNDLR": {
+            "description": "Your Spam Userbot's Command handler",
+            "value": ".",
+            "required": false  
+        }
+    },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
