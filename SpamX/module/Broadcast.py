@@ -1,3 +1,8 @@
+# RiZoeL X - Telegram Projects
+# (c) 2022 - 2023 RiZoeL
+# Don't Kang Bitch -!
+
+
 from SpamX import OWNER_ID, HNDLR, DEVS, LOGS_CHANNEL
 from pyrogram import Client , filters
 import asyncio
