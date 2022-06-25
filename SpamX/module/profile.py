@@ -4,7 +4,6 @@
 
 
 
-
 import os
 import sys
 from random import choice
@@ -34,9 +33,9 @@ async def setpic(_, e: Message):
          await e.reply_text("Reply To Media or Video To Change Profile pic")
      if LOGS_CHANNEL:
          try:
-            await c.send_message(LOGS_CHANNEL, f"Profile Pic Changed By User: {e.from_user.id}")
+            await Client.send_message(LOGS_CHANNEL, f"Profile Pic Changed By User: {e.from_user.id}")
          except:
-            await c.send_message(OWNER_ID, "Add Me In Logs Group")
+            await Client.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
       
 etc_bio = "ᴜsᴇʀ ᴏғ ʀɪᴢᴏᴇʟ x sᴘᴀᴍ"
@@ -57,9 +56,9 @@ async def setname(xspam: Client, e: Message):
           await e.reply_text(Usage)
       if LOGS_CHANNEL:
          try:
-            await c.send_message(LOGS_CHANNEL, f"Name Changed By User {e.from_user.id} \n\n New Name: {name}")
+            await xspam.send_message(LOGS_CHANNEL, f"Name Changed By User {e.from_user.id} \n\n New Name: {name}")
          except:
-            await c.send_message(OWNER_ID, "Add Me In Logs Group")
+            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command(["setbio"], prefixes=HNDLR))
@@ -81,7 +80,7 @@ async def setbio(xspam: Client, e: Message):
           await e.reply_text(Usage)
       if LOGS_CHANNEL:
          try:
-            await c.send_message(LOGS_CHANNEL, f"Bio Changed By User: {e.from_user.id} \n\n New Bio: {xd}")
+            await xspam.send_message(LOGS_CHANNEL, f"Bio Changed By User: {e.from_user.id} \n\n New Bio: {xd}")
          except:
-            await c.send_message(OWNER_ID, "Add Me In Logs Group")
+            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
