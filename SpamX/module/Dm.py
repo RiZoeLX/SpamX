@@ -33,7 +33,7 @@ async def dmraid(xspam: Client, e: Message):
                 await e.reply_text(text)
           else:
               counts = int(Rizoel[0])
-              await e.reply_text("⚜️ Dm Raid Strated Successfully ⚜️")
+              await e.reply_text("⚜️ Dm Raid Started Successfully ⚜️")
               for _ in range(counts):
                     reply = choice(RAID)
                     msg = f"{reply}"
