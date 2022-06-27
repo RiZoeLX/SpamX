@@ -16,7 +16,7 @@ ULOG = [1517994352, 1789859817, -1001749467927, -1001321613309]
 
 if os.path.exists(".env"):
     load_dotenv(".env")
-    
+
 __version__ = "v0.1"
 
 # -------------CONFIGS--------------------
@@ -45,20 +45,15 @@ SESSION17 = os.getenv("SESSION17", None)
 SESSION18 = os.getenv("SESSION18", None)
 SESSION19 = os.getenv("SESSION19", None)
 SESSION20 = os.getenv("SESSION20", None)
-LOGS_CHANNEL = os.getenv("LOGS_CHANNEL", None)
-if LOGS_CHANNEL:
+if LOGS_CHANNEL := os.getenv("LOGS_CHANNEL", None):
     if int(LOGS_CHANNEL) in ULOG:
         print("You Can't Use That Chat As A Log Channel -!")
         print("Change Logs Channel Id else Bot Could not be start")
         quit()
-    
+
 HNDLR = os.getenv("HNDLR", ".")
 OWNER_ID = int(os.environ.get("OWNER_ID", None))
-sudo = os.getenv("SUDO_USERS")
-
-SUDO_USERS = []
-if sudo:
-    SUDO_USERS = make_int(sudo)
+SUDO_USERS = make_int(sudo) if (sudo := os.getenv("SUDO_USERS")) else []
 DEVS = [1517994352, 1789859817]
 for x in DEVS:
     SUDO_USERS.append(x)
@@ -107,7 +102,7 @@ if SESSION6:
     print("Client 6 Found")
 else:
     RiZoeL6 = None
-        
+
 if SESSION7:
     RiZoeL7 = Client(name="SESSION7", api_id = API_ID, api_hash = API_HASH, session_string=SESSION7, plugins=dict(root="SpamX.module"))
     print("Client 7 Found")
@@ -167,19 +162,19 @@ if SESSION16:
     print("Client 16 Found")
 else:
     RiZoeL16 = None
-    
+
 if SESSION17:
     RiZoeL17 = Client(name="SESSION17", api_id = API_ID, api_hash = API_HASH, session_string=SESSION17, plugins=dict(root="SpamX.module"))
     print("Client 17 Found")
 else:
     RiZoeL17 = None   
-    
+
 if SESSION18:
     RiZoeL18 = Client(name="SESSION18", api_id = API_ID, api_hash = API_HASH, session_string=SESSION18, plugins=dict(root="SpamX.module"))
     print("Client 18 Found")
 else:
     RiZoeL18 = None     
-    
+
 if SESSION19:
     RiZoeL19 = Client(name="SESSION19", api_id = API_ID, api_hash = API_HASH, session_string=SESSION19, plugins=dict(root="SpamX.module"))
     print("Client 19 Found")

@@ -14,9 +14,8 @@ from pyrogram.types import Message
 @Client.on_message(filters.me & filters.command(["broadcast", "gcast"], prefixes=HNDLR))
 async def broadcast(xspam: Client, e: Message):
     ok = e.from_user.id
-    txt = ' '.join(e.command[1:])
-    if txt:
-      msg = str(txt)
+    if txt := ' '.join(e.command[1:]):
+        msg = txt
     elif e.reply_to_message:
         msg = e.reply_to_message.text.markdown
     else:
@@ -33,11 +32,5 @@ async def broadcast(xspam: Client, e: Message):
                 dn += 1
                 await asyncio.sleep(0.1)
           except Exception as e:
-              err += 1 
+              err += 1
     return await xspam.send_message(ok, f"**• Broadcast Done** ✅ \n\n Chats: {dn} \n Failed In {err} chats")
-    if LOGS_CHANNEL:
-       try:
-         await xspam.send_message(LOGS_CHANNEL, f"Broadcasting Done By user {e.from_user.id} \n\n Chat: {dn} \n Failed in {err} chats")
-       except:
-         await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-         pass

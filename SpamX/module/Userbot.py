@@ -13,11 +13,11 @@ from SpamX import (HNDLR, SUDO_USERS, ALIVE_PIC, ALIVE_MSG, PING_MSG, __version_
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram import __version__ as pyro_vr             
-                
 
-pongg = PING_MSG if PING_MSG else "Sᴘᴀᴍ X"
-RIZ_PIC = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/ec832fc9107fd21edfee3.jpg"
-Alivemsg = ALIVE_MSG if ALIVE_MSG else "𝗦𝗽𝗮𝗺𝗫 𝗛𝗲𝗿𝗲."
+
+pongg = PING_MSG or "Sᴘᴀᴍ X"
+RIZ_PIC = ALIVE_PIC or "https://telegra.ph/file/ec832fc9107fd21edfee3.jpg"
+Alivemsg = ALIVE_MSG or "𝗦𝗽𝗮𝗺𝗫 𝗛𝗲𝗿𝗲."
 
 
 rizoel = f"⁂ {Alivemsg} ⁂\n\n"
@@ -27,7 +27,7 @@ rizoel += f"➠ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** : `{pyro_vr}`\n"
 rizoel += f"➠ **SᴘᴀᴍX ᴠᴇʀsɪᴏɴ**  : `{__version__}`\n"
 rizoel += f"➠ **ᴄʜᴀɴɴᴇʟ** : [Join.](https://t.me/RiZoeLX)\n"
 rizoel += f"━───────╮•╭───────━\n\n"
-rizoel += f"➠ **Source Code:** [•Repo•](https://github.com/RiZoeLX)"
+rizoel += "➠ **Source Code:** [•Repo•](https://github.com/RiZoeLX)"
 
 
 async def get_time(seconds: int) -> str:
@@ -46,7 +46,7 @@ async def get_time(seconds: int) -> str:
     for x in range(hmm):
         time_list[x] = str(time_list[x]) + time_suffix_list[x]
     if len(time_list) == 4:
-        up_time += time_list.pop() + ", "
+        up_time += f"{time_list.pop()}, "
     time_list.reverse()
     up_time += ":".join(time_list)
     return up_time
