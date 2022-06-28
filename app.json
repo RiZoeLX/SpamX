@@ -1,6 +1,6 @@
 {
       "name": "SpamX - RiZoeL",
-      "description": "A Pyrogram Based Span Bots With Many Cmds Fast And Stable",
+      "description": "A Pyrogram Based Spam Bots With Many Cmds Fast And Stable",
       "logo": "https://telegra.ph/file/ec832fc9107fd21edfee3.jpg",
       "keywords": [
         "telegram",
@@ -129,12 +129,12 @@
         "required": false
       },      
        "SUDO_USER": {
-            "description": "Sudo users id space by space or leave blank",
+            "description": "Sudo users id seperate multiple values with space.",
             "value": "",
             "required": false
         },
       "OWNER_ID": {
-            "description": "Sudo users id space by space",
+            "description": "User id of the user who will known as the owner of the bots.",
             "value": "",
             "required": true
         },

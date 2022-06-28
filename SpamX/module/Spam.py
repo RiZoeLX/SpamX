@@ -30,7 +30,7 @@ async def spam(client: Client, message: Message):
     if count.isnumeric():
         counts = int(count)
     else:
-         await message.reply_text("**Send Counts In Numbe**")
+         await message.reply_text("**Send Counts In Number**")
          return
     if message.reply_to_message:
         reply_to_id = message.reply_to_message.message_id
@@ -45,7 +45,7 @@ async def spam(client: Client, message: Message):
         await asyncio.sleep(0.1)
     if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
+            await xspam.send_message(LOGS_CHANNEL, f"Started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
          except:
             await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
@@ -78,7 +78,7 @@ async def delayspam(xspam: Client, e: Message):
         await xspam.reply(usage)   
     if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Delay Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg} \n Delay Time: {sleeptime}")
+            await xspam.send_message(LOGS_CHANNEL, f"Started Delay Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg} \n Delay Time: {sleeptime}")
          except:
             await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
@@ -105,7 +105,7 @@ async def pornspam(xspam: Client, e: Message):
               await asyncio.sleep(0.4)
     if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Porn Spam By User: {e.from_user.id} \n Chat: {e.chat.id} \n Counts: {count}")
+            await xspam.send_message(LOGS_CHANNEL, f"Started Porn Spam By User: {e.from_user.id} \n Chat: {e.chat.id} \n Counts: {count}")
          except:
             await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
@@ -169,7 +169,7 @@ async def raid(xspam: Client, e: Message):
           await xspam.reply(usage)
       if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Raid By User: {e.from_user.id} \n\n On User: {mention} \n Chat: {e.chat.id} \n Counts: {counts}")
+            await xspam.send_message(LOGS_CHANNEL, f"Started Raid By User: {e.from_user.id} \n\n On User: {mention} \n Chat: {e.chat.id} \n Counts: {counts}")
          except:
             await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
@@ -177,7 +177,7 @@ async def raid(xspam: Client, e: Message):
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["fspam", "fastspam"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["fspam", "fastspam"], prefixes=HNDLR))
 async def spam(xspam: Client, e: Message):
-    warn = await e.reply_text("**Note:** Don't Blame to @RiZoeLX If IDs Get ban -!")
+    warn = await e.reply_text("**Note:** Don't Blame to @RiZoeLX If IDs got banned -!")
     await asyncio.sleep(3)
     await warn.delete()
     Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
@@ -201,7 +201,7 @@ async def spam(xspam: Client, e: Message):
         await xspam.reply(usage)
     if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Fast Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
+            await xspam.send_message(LOGS_CHANNEL, f"Started Fast Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
          except:
             await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
@@ -221,7 +221,7 @@ async def pornspam(xspam: Client, e: Message):
          await asyncio.sleep(0.3)
     if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Hang Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {count}")
+            await xspam.send_message(LOGS_CHANNEL, f"Started Hang Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {count}")
          except:
             await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
             pass
