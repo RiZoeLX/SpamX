@@ -63,7 +63,7 @@ async def delayspam(xspam: Client, e: Message):
             return await e.reply_text("**Sorry !! i Can't Spam Here.**")
        msg = str(Rizoelop[1])
        if re.search(Owners.lower(), msg.lower()):
-            return await e.reply("**Sorry !!** I can't Spam On @RiZoeLX's owner")
+            return await e.reply_text(usage)("**Sorry !!** I can't Spam On @RiZoeLX's owner")
        sleeptime = float(Rizoel[0])
        if e.reply_to_message:
           reply_to_id = e.reply_to_message.message_id
@@ -75,7 +75,7 @@ async def delayspam(xspam: Client, e: Message):
            await xspam.send_message(e.chat.id, msg)
            await asyncio.sleep(sleeptime)
     else:
-        await xspam.reply(usage)   
+        await e.reply_text(usage)   
     if LOGS_CHANNEL:
          try:
             await xspam.send_message(LOGS_CHANNEL, f"started Delay Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg} \n Delay Time: {sleeptime}")
@@ -166,7 +166,7 @@ async def raid(xspam: Client, e: Message):
                     await xspam.send_message(e.chat.id, msg)
                     await asyncio.sleep(0.10)
       else:
-          await xspam.reply(usage)
+          await e.reply_text(usage)
       if LOGS_CHANNEL:
          try:
             await xspam.send_message(LOGS_CHANNEL, f"started Raid By User: {e.from_user.id} \n\n On User: {mention} \n Chat: {e.chat.id} \n Counts: {counts}")
@@ -198,7 +198,7 @@ async def spam(xspam: Client, e: Message):
            await xspam.send_message(e.chat.id, msg)
            await asyncio.sleep(0.002)
     else:
-        await xspam.reply(usage)
+        await e.reply_text(usage)
     if LOGS_CHANNEL:
          try:
             await xspam.send_message(LOGS_CHANNEL, f"started Fast Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
