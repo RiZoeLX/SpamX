@@ -78,7 +78,7 @@ if RiZoeL16:
 if RiZoeL17:
     RiZoeL17.start()
     RiZoeL17.join_chat("RiZoeLX")
-    RiZoeL7.join_chat("DNHxHELL")
+    RiZoeL17.join_chat("DNHxHELL")
 if RiZoeL18:
     RiZoeL18.start()
     RiZoeL18.join_chat("RiZoeLX")
