@@ -1,7 +1,6 @@
 python-decouple
 git+https://github.com/pyrogram/pyrogram@master
 cryptg
-psycopg2
 gitpython
 asyncio
 python-dotenv
