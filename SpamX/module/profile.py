@@ -13,9 +13,6 @@ from pyrogram.types import Message
 from SpamX.data import *
 
 Usage = f"**❌ Wrong Usage ❌** \n Type: `{HNDLR}help owner`"
-
-@Client.on_message(filters.user(OWNER_ID) & filters.command(["setpic"], prefixes=HNDLR))
-@Client.on_message(filters.me & filters.command(["setpic"], prefixes=HNDLR))
 Media = "SpamX/downloads/Profile.jpg"
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command(["setpic"], prefixes=HNDLR))
