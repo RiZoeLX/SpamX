@@ -18,31 +18,29 @@ from SpamX.data import *
 usage = f"** ❌ Wrong Usage ❌** \n Type `{HNDLR}help spam`"
 
 
-@Client.on_message(filters.me & filters.command(["spam"], prefixes=HNDLR)) 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["spam"], prefixes=HNDLR))
-async def spam(client: Client, message: Message):
-    count = message.command[1]
-    spam_text = ' '.join(message.command[2:])
-    if int(e.chat.id) in GROUP:
-            return await message.reply_text("**Sorry !! i Can't Spam Here.**")
-    if re.search(Owners.lower(), spam_text.lower()):
-            return await message.reply_text("**Sorry !!** I can't Spam On @RiZoeLX's owner")
-    if count.isnumeric():
-        counts = int(count)
-    else:
-         await message.reply_text("**Send Counts In Numbe**")
-         return
-    if message.reply_to_message:
-        reply_to_id = message.reply_to_message.message_id
-        for _ in range(counts):
-            await client.send_message(message.chat.id, spam_text,
-                                      reply_to_message_id=reply_to_id)
-            await asyncio.sleep(0.1)
-        return
 
-    for _ in range(counts):
-        await client.send_message(message.chat.id, spam_text)
-        await asyncio.sleep(0.1)
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["spam", "spamm"], prefixes=HNDLR))
+@Client.on_message(filters.me & filters.command(["spam", "spamm"], prefixes=HNDLR))
+async def spam(xspam: Client, e: Message):
+    Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
+    if len(Rizoel) == 2:
+       counts = int(Rizoel[0])
+       if int(e.chat.id) in GROUP:
+            return await e.reply_text("**Sorry !! i Can't Spam Here.**")
+       msg = str(Rizoel[1])
+       if re.search(Owners.lower(), msg.lower()):
+            return await e.reply("**Sorry !!** I can't Spam On @RiZoeLX's owner")
+       if e.reply_to_message:
+          reply_to_id = e.reply_to_message.message_id
+          for _ in range(counts):
+              await xspam.send_message(e.chat.id, msg, reply_to_message_id=reply_to_id)
+              await asyncio.sleep(0.1)
+          return
+       for _ in range(counts):
+           await xspam.send_message(e.chat.id, msg)
+           await asyncio.sleep(0.1)
+    else:
+        await e.reply_text(usage)
     if LOGS_CHANNEL:
          try:
             await xspam.send_message(LOGS_CHANNEL, f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
@@ -88,7 +86,7 @@ async def delayspam(xspam: Client, e: Message):
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["pornspam"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["pornspam"], prefixes=HNDLR))
 async def pornspam(xspam: Client, e: Message): 
-    counts = e.command[0]
+    counts = e.command[1]
     if not counts:
         return await e.reply_text(usage)
     if int(e.chat.id) in GROUP:
@@ -176,7 +174,7 @@ async def raid(xspam: Client, e: Message):
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["fspam", "fastspam"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["fspam", "fastspam"], prefixes=HNDLR))
-async def spam(xspam: Client, e: Message):
+async def fastspam(xspam: Client, e: Message):
     warn = await e.reply_text("**Note:** Don't Blame to @RiZoeLX If IDs Get ban -!")
     await asyncio.sleep(3)
     await warn.delete()
@@ -208,7 +206,7 @@ async def spam(xspam: Client, e: Message):
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["hang"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["hang"], prefixes=HNDLR))
-async def pornspam(xspam: Client, e: Message): 
+async def hang(xspam: Client, e: Message): 
     counts = e.command[1]
     if not counts:
         return await e.reply_text(usage)
