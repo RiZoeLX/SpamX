@@ -16,21 +16,20 @@ Usage = f"**❌ Wrong Usage ❌** \n Type: `{HNDLR}help owner`"
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command(["setpic"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["setpic"], prefixes=HNDLR))
-async def setpic(_, e: Message):
+Media = "SpamX/downloads/Profile.jpg"
+
+@Client.on_message(filters.user(OWNER_ID) & filters.command(["setpic"], prefixes=HNDLR))
+@Client.on_message(filters.me & filters.command(["setpic"], prefixes=HNDLR))
+async def setpic(xspam: Client, e: Message):
      replied = e.reply_to_message
-     if replied.video or replied.photo:
-        try:
-            media = await replied.download_media()
-        except:
-            pass
-        await Client.set_profile_photo(media)
-        await e.reply_text(f"**Changed profile picture successfully** ✅")
-        try:
-            os.remove(media)
-        except Exception as e:
-            print(str(e))
+     if (replied and replied.media and (replied.photo or (replied.document and "image" in replied.document.mime_type))):
+            await xspam.download_media(message=replied, file_name=Media)
+            await xspam.set_profile_photo(photo=Media)
+            await e.reply_text(f"**Changed profile picture successfully** ✅")
+            if os.path.exists(Media):
+                  os.remove(Media)
      else:
-         await e.reply_text("Reply To Media or Video To Change Profile pic")
+         await e.reply_text("Reply To any Photo To Change Profile pic")
      if LOGS_CHANNEL:
          try:
             await Client.send_message(LOGS_CHANNEL, f"Profile Pic Changed By User: {e.from_user.id}")
