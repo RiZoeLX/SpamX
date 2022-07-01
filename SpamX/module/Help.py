@@ -44,30 +44,30 @@ spam_help = f"""
 
 **spam**: Spams a message for given counter (no Count limit)
 syntax:
- {hl}spam <count> <message to spam> 
+ {hl}spam (count) (message to spam)
 
 **delayspam**: Delay spam a text for given counter after given time.
 syntax:
- {hl}delayspam <delay time(seconds)> <count> <message to spam> 
+ {hl}delayspam (delay time In seconds) (count) (message to spam) 
 
 **Fast Spam**: Fast Spam a message for given counter (no Count limit)
 syntax:
- {hl}fspam <count> <message to spam>
+ {hl}fspam (count) (message to spam)
  
 **Note:** Fast Spam Is Harmful for IDs Don't Blame to @RiZoeLX If IDs Get ban -!
 
 
 **pornspam**: Porn Spam for given counter.
 syntax:
- {hl}pornspam <counter>
+ {hl}pornspam (counter)
 
 **raid:** Activates raid on any individual user for given range.
 syntax:
- {hl}raid <count> <username or user id>
+ {hl}raid (count) (username or user id)
 
 **Hang:** Hang Message Spam
 syntax:
-{hl}hang <counts>
+{hl}hang (counts)
 
 
 **© @RiZoeLX**
@@ -79,15 +79,15 @@ dm_help = f"""
 
 **Dm:** Dm to any individual using spam bots
 command:
-  {hl}dm <username or user id> <message>
+  {hl}dm (username or user id) (message)
 
 **Dm Spam:** Spam in Dm of Any individual Users
 command:
-  {hl}dmspam <username or user id> <count>  <message to spam>
+  {hl}dmspam (username or user id) (count)  (message to spam)
 
 **Dm Raid:** raid in Dm of Any individual Users
 command:
-  {hl}dmraid <count> <username or user id>
+  {hl}dmraid (count) (username or user id)
 
 **© @RiZoeLX**
 """
@@ -97,8 +97,8 @@ join_help = f"""
 **• Join Cmds •**
 
 **join:** Join any Public Channel and group
-command:
-  {hl}join <private/public Chat invite link or username>
+Syntax:
+  {hl}join private/public Chat invite link or username
 
 
 **© @RiZoeLX
@@ -109,7 +109,7 @@ leave_help = f"""
 
 **leave:** Leave any Public/private Group or Channel
 syntax:
-i) {hl}leave <group Username or chat user id>
+i) {hl}leave group Username or chat user id
 ii) {hl}leave
 
 **© @RiZoeLX**
@@ -135,9 +135,9 @@ __Note__ : Only Spam Bot's Owner Can Use this cmds.
 **Profile:** Profile And Other Cmds
 commands:
 
-1) {hl}setname <Profile Name>
-2) {hl}setbio <coustom Bio>
-3) {hl}setpic <reply to media>
+1) {hl}setname (Profile Name)
+2) {hl}setbio (coustom Bio)
+3) {hl}setpic (reply to media)
 
 **© @RiZoeLX **
 """
@@ -154,7 +154,7 @@ help_menu = f"""
 `leave` : Get leave commands and its usage
 `userbot` : Get all userbot commands
 
-**Type** {hl}help <category> **to get all syntax in that category and its usage**
+**Type** {hl}help (category) **to get all syntax in that category and its usage**
 **Example**: `{hl}help spam`
 
 **© @RiZoeLX**
