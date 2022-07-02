@@ -143,7 +143,7 @@ commands:
 """
 
 help_menu = f"""
-**RiZoeL X Spam Help**
+**SpamX Help Menu **
 
 **There are following categories**
 
