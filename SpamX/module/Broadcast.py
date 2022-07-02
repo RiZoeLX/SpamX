@@ -37,7 +37,7 @@ async def broadcast(xspam: Client, e: Message):
     return await xspam.send_message(ok, f"**• Broadcast Done** ✅ \n\n Chats: {dn} \n Failed In {err} chats")
     if LOGS_CHANNEL:
        try:
-         await xspam.send_message(LOGS_CHANNEL, f"Broadcasting Done By user {e.from_user.id} \n\n Chat: {dn} \n Failed in {err} chats")
-       except:
-         await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-         pass
+           await xspam.send_message(LOGS_CHANNEL, f"Broadcasting Done By user {e.from_user.id} \n\n Chat: {dn} \n Failed in {err} chats")
+       except Exception as a:
+             print(a)
+             pass
