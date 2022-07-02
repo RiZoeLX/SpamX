@@ -23,10 +23,10 @@ async def join(xspam: Client, e: Message):
         await e.reply_text(f"**ERROR:** \n\n{str(ex)}")
     if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"Joined New Chat \n\n Chat: {chat} \n Cmd By User: {e.from_user.id}")
-         except:
-            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+             await xspam.send_message(LOGS_CHANNEL, f"Joined New Chat \n\n Chat: {chat} \n Cmd By User: {e.from_user.id}")
+         except Exception as a:
+             print(a)
+             pass
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["leave"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["leave"], prefixes=HNDLR))
@@ -53,7 +53,7 @@ async def leave(xspam: Client, e: Message):
            await e.reply_text(f"**ERROR:** \n\n{str(ex)}")
         if LOGS_CHANNEL:
            try:
-              await xspam.send_message(LOGS_CHANNEL, f"Leaved Chat \n\n Chat: {chat} \n Cmd By User: {e.from_user.id}")
-           except:
-              await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-
+                await xspam.send_message(LOGS_CHANNEL, f"Leaved Chat \n\n Chat: {chat} \n Cmd By User: {e.from_user.id}")
+           except Exception as a:
+             print(a)
+             pass
