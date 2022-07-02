@@ -43,10 +43,10 @@ async def spam(xspam: Client, e: Message):
         await e.reply_text(usage)
     if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
-         except:
-            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+             await xspam.send_message(LOGS_CHANNEL, f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
+         except Exception as a:
+             print(a)
+             pass
 
 
 
@@ -76,10 +76,10 @@ async def delayspam(xspam: Client, e: Message):
         await e.reply_text(usage)   
     if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Delay Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg} \n Delay Time: {sleeptime}")
-         except:
-            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+             await xspam.send_message(LOGS_CHANNEL, f"started Delay Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg} \n Delay Time: {sleeptime}")
+         except Exception as a:
+             print(a)
+             pass
 
 
 
@@ -104,9 +104,9 @@ async def pornspam(xspam: Client, e: Message):
     if LOGS_CHANNEL:
          try:
             await xspam.send_message(LOGS_CHANNEL, f"started Porn Spam By User: {e.from_user.id} \n Chat: {e.chat.id} \n Counts: {count}")
-         except:
-            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+         except Exception as a:
+             print(a)
+             pass
 
 
 
@@ -168,9 +168,9 @@ async def raid(xspam: Client, e: Message):
       if LOGS_CHANNEL:
          try:
             await xspam.send_message(LOGS_CHANNEL, f"started Raid By User: {e.from_user.id} \n\n On User: {mention} \n Chat: {e.chat.id} \n Counts: {counts}")
-         except:
-            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+         except Exception as a:
+             print(a)
+             pass
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["fspam", "fastspam"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["fspam", "fastspam"], prefixes=HNDLR))
@@ -200,9 +200,9 @@ async def fastspam(xspam: Client, e: Message):
     if LOGS_CHANNEL:
          try:
             await xspam.send_message(LOGS_CHANNEL, f"started Fast Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
-         except:
-            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+         except Exception as a:
+             print(a)
+             pass
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["hang"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["hang"], prefixes=HNDLR))
@@ -220,6 +220,6 @@ async def hang(xspam: Client, e: Message):
     if LOGS_CHANNEL:
          try:
             await xspam.send_message(LOGS_CHANNEL, f"started Hang Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {count}")
-         except:
-            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+         except Exception as a:
+             print(a)
+             pass
