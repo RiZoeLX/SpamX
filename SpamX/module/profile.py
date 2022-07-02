@@ -29,10 +29,10 @@ async def setpic(xspam: Client, e: Message):
          await e.reply_text("Reply To any Photo To Change Profile pic")
      if LOGS_CHANNEL:
          try:
-            await Client.send_message(LOGS_CHANNEL, f"Profile Pic Changed By User: {e.from_user.id}")
-         except:
-            await Client.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+              await Client.send_message(LOGS_CHANNEL, f"Profile Pic Changed By User: {e.from_user.id}")
+         except Exception as a:
+             print(a)
+             pass
       
 etc_bio = "ᴜsᴇʀ ᴏғ ʀɪᴢᴏᴇʟ x sᴘᴀᴍ"
 
@@ -52,10 +52,10 @@ async def setname(xspam: Client, e: Message):
           await e.reply_text(Usage)
       if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"Name Changed By User {e.from_user.id} \n\n New Name: {name}")
-         except:
-            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+             await xspam.send_message(LOGS_CHANNEL, f"Name Changed By User {e.from_user.id} \n\n New Name: {name}")
+         except Exception as a:
+             print(a)
+             pass
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command(["setbio"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["setbio"], prefixes=HNDLR))
@@ -76,7 +76,7 @@ async def setbio(xspam: Client, e: Message):
           await e.reply_text(Usage)
       if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"Bio Changed By User: {e.from_user.id} \n\n New Bio: {xd}")
-         except:
-            await xspam.send_message(OWNER_ID, "Add Me In Logs Group")
-            pass
+             await xspam.send_message(LOGS_CHANNEL, f"Bio Changed By User: {e.from_user.id} \n\n New Bio: {xd}")
+         except Exception as a:
+             print(a)
+             pass
