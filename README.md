@@ -53,7 +53,7 @@
 <br>
 × <i> You'll need a API_ID & API_HASH in order to generate Pyrogram session string. Get This Values from https://my.telegram.org </i>
 <h4>• Generate Session Using Telegram Bot: </h4>    
-<p><a href="http://t.me/TELESTRING_BOT?start=generate"><img src="https://telegra.ph/file/1ccff3d3c8535d614ddf9.jpg" width="100""/></a></p>
+<p><a href="http://t.me/TELESTRING_BOT?start=generate"><img src="https://telegra.ph/file/1ccff3d3c8535d614ddf9.jpg" width="150""/></a></p>
 
 </details>
 
