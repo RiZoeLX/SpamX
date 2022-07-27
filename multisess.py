@@ -15,7 +15,7 @@ try:
             s = RiZoeL.export_session_string()
             sess = str(s)
             if whom:
-                RiZoeL.get_users(whom).id
+                id = RiZoeL.get_users(whom).id
                 RiZoeL.send_message(id, f"**Pyrogram String Session** \n\n `{sess}` \n\n © @RiZoeLX")
             else:
                 RiZoeL.send_message("me", f"**Pyrogram String Session** \n\n `{sess}` \n\n © @RiZoeLX")
