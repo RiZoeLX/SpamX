@@ -1,0 +1,1 @@
+# SpamX Multiple String Generator 
