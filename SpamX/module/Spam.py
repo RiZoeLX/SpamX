@@ -93,10 +93,10 @@ async def raid(xspam: Client, e: Message):
                 text = f"I can't raid on @RiZoeLX's Owner"
                 await e.reply_text(text)
           elif int(id) == OWNER_ID:
-                text = f"This guy is Owner Of this Bots."
+                text = f"This guy is The Owner Of these Bots."
                 await e.reply_text(text)
           elif int(id) in SUDO_USERS:
-                text = f"This guy is a sudo user."
+                text = f"This guy is sudo user."
                 await e.reply_text(text)
           else:
               fname = ok.first_name
@@ -119,10 +119,10 @@ async def raid(xspam: Client, e: Message):
                 text = f"I can't raid on @RiZoeLX's Owner"
                 await e.reply_text(text)
           elif int(id) == OWNER_ID:
-                text = f"This guy is Owner Of this Bots."
+                text = f"This guy is the Owner Of these Bots."
                 await e.reply_text(text)
           elif int(id) in SUDO_USERS:
-                text = f"This guy is a sudo user."
+                text = f"This guy is sudo user."
                 await e.reply_text(text)
           else:
               fname = ok.first_name
