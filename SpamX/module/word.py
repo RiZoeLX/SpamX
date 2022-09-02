@@ -13,19 +13,20 @@ WORD = [ "AJA", "TERI", "MAA", "KI", "CHUT", "FAAD", "DUNGA", "HIJDE", "TERA", "
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["abuse", "gali"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["abuse", "gali"], prefixes=HNDLR))
 async def spam(_, e: Message): 
-    count = e.command[1]
-    if int(e.chat.id) in GROUP:
-         return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-    counts = int(count)
-    msg = choice(WORD)
-    if e.reply_to_message:
-        reply_to_id = e.reply_to_message.message_id
-        for _ in range(counts):
-            await e.send_message(e.chat.id, msg, reply_to_message_id=reply_to_id)
-            await asyncio.sleep(0.01)
-        return
-    for _ in range(counts):
-        await e.send_message(e.chat.id, msg)
-        await asyncio.sleep(0.01)
-
-
+    Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
+    if len(Rizoel) == 1:
+       counts = int(Rizoel[0])
+       if int(e.chat.id) in GROUP:
+            return await e.reply_text("**Sorry !! i Can't Spam Here.**")
+       msg = choice(WORD)
+       if e.reply_to_message:
+           reply_to_id = e.reply_to_message.message_id
+           for _ in range(counts):
+               await e.send_message(e.chat.id, msg, reply_to_message_id=reply_to_id)
+               await asyncio.sleep(0.01)
+           return
+       for _ in range(counts):
+           await e.send_message(e.chat.id, msg)
+           await asyncio.sleep(0.01)
+    else:
+         await e.reply_text(f"**Wrong Usage** \n\n Cmd: {HNDLR}abuse (count) ")
