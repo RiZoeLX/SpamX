@@ -55,28 +55,29 @@ async def delayspam(xspam: Client, e: Message):
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["pornspam"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["pornspam"], prefixes=HNDLR))
 async def pornspam(xspam: Client, e: Message): 
-    counts = e.command[1]
-    if not counts:
-        return await e.reply_text(usage)
-    if int(e.chat.id) in GROUP:
-         return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-    rizoel = "**#Pornspam**"
-    count = int(counts)
-    for _ in range(count):
-         prn = choice(PORM)
-         if ".jpg" in prn or ".png" in prn:
+    Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
+    if len(Rizoel) == 1:
+       counts = int(Rizoel[0])
+       if int(e.chat.id) in GROUP:
+            return await e.reply_text("**Sorry !! i Can't Spam Here.**")
+       rizoel = "**#Pornspam**"
+       count = int(counts)
+       for _ in range(count):
+           prn = choice(PORM)
+           if ".jpg" in prn or ".png" in prn:
               await xspam.send_photo(e.chat.id, prn, caption=rizoel)
               await asyncio.sleep(0.4)
-         if ".mp4" in prn or ".MP4," in prn:
+           if ".mp4" in prn or ".MP4," in prn:
               await xspam.send_video(e.chat.id, prn, caption=rizoel)
               await asyncio.sleep(0.4)
-    if LOGS_CHANNEL:
-         try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Porn Spam By User: {e.from_user.id} \n Chat: {e.chat.id} \n Counts: {count}")
-         except Exception as a:
-             print(a)
-             pass
-
+       if LOGS_CHANNEL:
+           try:
+               await xspam.send_message(LOGS_CHANNEL, f"started Porn Spam By User: {e.from_user.id} \n Chat: {e.chat.id} \n Counts: {count}")
+           except Exception as a:
+               print(a)
+               pass
+    else:
+         await e.reply_text(usage)
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["raid"], prefixes=HNDLR))
