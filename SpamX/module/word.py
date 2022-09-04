@@ -20,5 +20,5 @@ async def abuse(xspam: Client, e: Message):
           return await e.reply_text("**Sorry !! i Can't Spam Here.**")
      for _ in range(counts):
          msg = choice(WORD)
-         await e.send_message(e.chat.id, msg)
+         await xspam.send_message(e.chat.id, msg)
          await asyncio.sleep(0.001)
