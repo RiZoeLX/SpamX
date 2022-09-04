@@ -12,7 +12,7 @@ WORD = [ "AJA", "TERI", "MAA", "KI", "CHUT", "FAAD", "DUNGA", "HIJDE", "TERA", "
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["abuse", "gali"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["abuse", "gali"], prefixes=HNDLR))
-async def spam(xspam: Client, e: Message): 
+async def abuse(xspam: Client, e: Message): 
      counts = int(e.text[6:])
      if not counts:
           return await e.reply_text(f"**Wrong Usage** \n\n Cmd: {HNDLR}abuse (count) ")
