@@ -33,6 +33,8 @@ async def help(_, e: Message):
                 await e.reply(leave_help)
             elif helping.lower() == "owner":
                 await e.reply(owner_help)
+            elif helping.lower() == "extra":
+                await e.reply(extra_help)
             else:
                 await e.reply(help_menu)
         else:
@@ -153,9 +155,37 @@ help_menu = f"""
 `join` : Get join commands and its usage
 `leave` : Get leave commands and its usage
 `userbot` : Get all userbot commands
+`extra` : Get all extra Cmds 
 
 **Type** {hl}help (category) **to get all syntax in that category and its usage**
 **Example**: `{hl}help spam`
+
+**© @RiZoeLX**
+"""
+
+
+extra_help = f"""
+**• Unlimited Cmds •**
+
+**Unlimited spam**
+syntax:
+ {hl}uspam (message to spam)
+
+**Unlimited raid**
+syntax:
+ {hl}uraid (username or user id / reply to user)
+
+**Abuse / One Word**
+syntax:
+  {hl}absue (counts)
+
+  **Read**: if you want unlimited abuse simply type {hl}abuse -!
+
+**stop cmd**: Simply type {hl}stop to stop spam/abuse/raid any of that 
+
+**Message all**: this cmd if use to message all group members
+Syntax:
+  {hl}msgall (your message)
 
 **© @RiZoeLX**
 """
