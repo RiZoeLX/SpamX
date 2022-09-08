@@ -183,7 +183,7 @@ syntax:
 
 **stop cmd**: Simply type {hl}stop to stop spam/abuse/raid any of that 
 
-**Message all**: this cmd if use to message all group members
+**Message all**: this cmd is use to message all group members
 Syntax:
   {hl}msgall (your message)
 
