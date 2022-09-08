@@ -55,9 +55,9 @@ async def delayspam(xspam: Client, e: Message):
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["pornspam"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["pornspam"], prefixes=HNDLR))
 async def pornspam(xspam: Client, e: Message): 
-    Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
-    if len(Rizoel) == 1:
-       counts = int(Rizoel[0])
+    xx = e.text[9:]
+    if xx:
+       counts = int(xx)
        if int(e.chat.id) in GROUP:
             return await e.reply_text("**Sorry !! i Can't Spam Here.**")
        rizoel = "**#Pornspam**"
@@ -174,7 +174,7 @@ async def fastspam(xspam: Client, e: Message):
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["hang"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["hang"], prefixes=HNDLR))
 async def hang(xspam: Client, e: Message): 
-    counts = e.command[1]
+    counts = e.text[5:]
     if not counts:
         return await e.reply_text(usage)
     if int(e.chat.id) in GROUP:
