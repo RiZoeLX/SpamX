@@ -17,7 +17,7 @@ ULOG = [1517994352, 1789859817, -1001749467927, -1001321613309]
 if os.path.exists(".env"):
     load_dotenv(".env")
     
-__version__ = "v0.1"
+__version__ = "v0.2"
 
 # -------------CONFIGS--------------------
 API_ID = int(os.getenv("API_ID", ""))
