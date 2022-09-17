@@ -128,7 +128,7 @@
         "value": "",
         "required": false
       },      
-       "SUDO_USER": {
+       "SUDO_USERS": {
             "description": "Sudo users id space by space or leave blank",
             "value": "",
             "required": false
