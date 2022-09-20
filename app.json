@@ -9,7 +9,7 @@
         "RiZoeLXSpam",
         "SpamBots"
       ],   
-  "repository": "https://github.com/MrRizoel",
+  "repository": "https://github.com/RiZoeLX/SpamX",
   "website": "https://github.com/RiZoeLX",
   "success_url": "https://t.me/RiZoeLX",
   "env": {
@@ -128,7 +128,7 @@
         "value": "",
         "required": false
       },      
-       "SUDO_USERS": {
+      "SUDO_USERS": {
             "description": "Sudo users id space by space or leave blank",
             "value": "",
             "required": false
@@ -149,17 +149,9 @@
             "required": false  
         }
     },
-  "addons": [
-    {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "12"
-      }
-    }
-  ],
     "buildpacks": [
         {
-            "url": "heroku/python"
+          "url": "heroku/python"
         }
     ]
 }
