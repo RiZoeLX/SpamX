@@ -1,6 +1,6 @@
 from pyrogram import Client, filters 
 from pyrogram.types import Message
-from config import OWNER_ID, HNDLR
+from SpamX import OWNER_ID, HNDLR
 import asyncio
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command(["scrape", "inviteall"], prefixes=HNDLR))
