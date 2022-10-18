@@ -17,7 +17,7 @@ ULOG = [1517994352, 1789859817, -1001749467927, -1001321613309]
 if os.path.exists(".env"):
     load_dotenv(".env")
     
-__version__ = "v0.2"
+__version__ = "v0.3"
 
 # -------------CONFIGS--------------------
 API_ID = int(os.getenv("API_ID", ""))
@@ -25,26 +25,26 @@ API_HASH = os.getenv("API_HASH", "")
 ALIVE_PIC = os.getenv("ALIVE_PIC", "")
 ALIVE_MSG = os.getenv("ALIVE_MSG", "")
 PING_MSG = os.getenv("PING_MSG", "")
-SESSION = os.getenv("SESSION", None)
-SESSION2 = os.getenv("SESSION2", None)
-SESSION3 = os.getenv("SESSION3", None)
-SESSION4 = os.getenv("SESSION4", None)
-SESSION5 = os.getenv("SESSION5", None)
-SESSION6 = os.getenv("SESSION6", None)
-SESSION7 = os.getenv("SESSION7", None)
-SESSION8 = os.getenv("SESSION8", None)
-SESSION9 = os.getenv("SESSION9", None)
-SESSION10 = os.getenv("SESSION10", None)
-SESSION11 = os.getenv("SESSION11", None)
-SESSION12 = os.getenv("SESSION12", None)
-SESSION13 = os.getenv("SESSION13", None)
-SESSION14 = os.getenv("SESSION14", None)
-SESSION15 = os.getenv("SESSION15", None)
-SESSION16 = os.getenv("SESSION16", None)
-SESSION17 = os.getenv("SESSION17", None)
-SESSION18 = os.getenv("SESSION18", None)
-SESSION19 = os.getenv("SESSION19", None)
-SESSION20 = os.getenv("SESSION20", None)
+CLIENT = os.getenv("CLIENT", None)
+CLIENT2 = os.getenv("CLIENT2", None)
+CLIENT3 = os.getenv("CLIENT3", None)
+CLIENT4 = os.getenv("CLIENT4", None)
+CLIENT5 = os.getenv("CLIENT5", None)
+CLIENT6 = os.getenv("CLIENT6", None)
+CLIENT7 = os.getenv("CLIENT7", None)
+CLIENT8 = os.getenv("CLIENT8", None)
+CLIENT9 = os.getenv("CLIENT9", None)
+CLIENT10 = os.getenv("CLIENT10", None)
+CLIENT11 = os.getenv("CLIENT11", None)
+CLIENT12 = os.getenv("CLIENT12", None)
+CLIENT13 = os.getenv("CLIENT13", None)
+CLIENT14 = os.getenv("CLIENT14", None)
+CLIENT15 = os.getenv("CLIENT15", None)
+CLIENT16 = os.getenv("CLIENT16", None)
+CLIENT17 = os.getenv("CLIENT17", None)
+CLIENT18 = os.getenv("CLIENT18", None)
+CLIENT19 = os.getenv("CLIENT19", None)
+CLIENT20 = os.getenv("CLIENT20", None)
 LOGS_CHANNEL = os.getenv("LOGS_CHANNEL", None)
 if LOGS_CHANNEL:
     if int(LOGS_CHANNEL) in ULOG:
@@ -79,9 +79,12 @@ SUDO_USERS.append(OWNER_ID)
 
 # SUDO_USERS = list(filter(lambda x: x, map(int, os.getenv("SUDO_USERS", "1517994352 1789859817").split())))
 #----------------------------------------------
-
-RiZoeL = Client(name="SESSION", api_id = API_ID, api_hash = API_HASH, session_string=SESSION, plugins=dict(root="SpamX.module"))
-print("Client 1 Found")
+if ":" in CLIENT:
+   RiZoeL = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT, plugins=dict(root="SpamX.bot"))
+   print("Bot token 1 Found")
+else:
+   RiZoeL = Client(name="CLIENT", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT, plugins=dict(root="SpamX.module"))
+   print("Client 1 Found")
 
 
 hl = HNDLR[0]
@@ -109,134 +112,210 @@ async def SpamX():
     global RiZoeL19
     global RiZoeL20
     
-    if SESSION2:
-         RiZoeL2 = Client(name="SESSION2", api_id = API_ID, api_hash = API_HASH, session_string=SESSION2, plugins=dict(root="SpamX.module"))
+    if CLIENT2:
+       if ":" in CLIENT2:
+         RiZoeL2 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT2, plugins=dict(root="SpamX.bot"))
+         print("Bot token 2 Found")
+       else:
+         RiZoeL2 = Client(name="CLIENT2", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT2, plugins=dict(root="SpamX.module"))
          print("Client 2 Found")
     else:
          RiZoeL2 = None
          pass
    
-    if SESSION3:
-         RiZoeL3 = Client(name="SESSION3", api_id = API_ID, api_hash = API_HASH, session_string=SESSION3, plugins=dict(root="SpamX.module"))
+    if CLIENT3:
+       if ":" in CLIENT3:
+         RiZoeL3 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT3, plugins=dict(root="SpamX.bot"))
+         print("Bot token 3 Found")
+       else:
+         RiZoeL3 = Client(name="CLIENT3", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT3, plugins=dict(root="SpamX.module"))
          print("Client 3 Found")
     else:
          RiZoeL3 = None
          pass
 
-    if SESSION4:
-         RiZoeL4 = Client(name="SESSION4", api_id = API_ID, api_hash = API_HASH, session_string=SESSION4, plugins=dict(root="SpamX.module"))
+    if CLIENT4:
+       if ":" in CLIENT4:
+         RiZoeL4 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT4, plugins=dict(root="SpamX.bot"))
+         print("Bot token 4 Found")
+       else:
+         RiZoeL4 = Client(name="CLIENT4", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT4, plugins=dict(root="SpamX.module"))
          print("Client 4 Found")
     else:
          RiZoeL4 = None
          pass
 
-    if SESSION5:
-         RiZoeL5 = Client(name="SESSION5", api_id = API_ID, api_hash = API_HASH, session_string=SESSION5, plugins=dict(root="SpamX.module"))
+    if CLIENT5:
+       if ":" in CLIENT5:
+         RiZoeL5 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT5, plugins=dict(root="SpamX.bot"))
+         print("Bot token 5 Found")
+       else:
+         RiZoeL5 = Client(name="CLIENT5", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT5, plugins=dict(root="SpamX.module"))
          print("Client 5 Found")
     else:
          RiZoeL5 = None
          pass  
 
-    if SESSION6:
-         RiZoeL6 = Client(name="SESSION6", api_id = API_ID, api_hash = API_HASH, session_string=SESSION6, plugins=dict(root="SpamX.module"))
+    if CLIENT6:
+       if ":" in CLIENT6:
+         RiZoeL6 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT6, plugins=dict(root="SpamX.bot"))
+         print("Bot token 6 Found")
+       else:
+         RiZoeL6 = Client(name="CLIENT6", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT6, plugins=dict(root="SpamX.module"))
          print("Client 6 Found")
     else:
          RiZoeL6 = None
          pass    
 
-    if SESSION7:
-         RiZoeL7 = Client(name="SESSION7", api_id = API_ID, api_hash = API_HASH, session_string=SESSION7, plugins=dict(root="SpamX.module"))
+    if CLIENT7:
+       if ":" in CLIENT7:
+         RiZoeL7 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT7, plugins=dict(root="SpamX.bot"))
+         print("Bot token 7 Found")
+       else:
+         RiZoeL7 = Client(name="CLIENT7", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT7, plugins=dict(root="SpamX.module"))
          print("Client 7 Found")
     else:
          RiZoeL7 = None
          pass    
 
-    if SESSION8:
-         RiZoeL8 = Client(name="SESSION8", api_id = API_ID, api_hash = API_HASH, session_string=SESSION8, plugins=dict(root="SpamX.module"))
+    if CLIENT8:
+       if ":" in CLIENT8:
+         RiZoeL8 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT8, plugins=dict(root="SpamX.bot"))
+         print("Bot token 8 Found")
+       else:
+         RiZoeL8 = Client(name="CLIENT8", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT8, plugins=dict(root="SpamX.module"))
          print("Client 8 Found")
     else:
          RiZoeL8 = None
          pass    
 
-    if SESSION9:
-         RiZoeL9 = Client(name="SESSION9", api_id = API_ID, api_hash = API_HASH, session_string=SESSION9, plugins=dict(root="SpamX.module"))
+    if CLIENT9:
+       if ":" in CLIENT9:
+         RiZoeL9 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT9, plugins=dict(root="SpamX.bot"))
+         print("Bot token 9 Found")
+       else:
+         RiZoeL9 = Client(name="CLIENT9", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT9, plugins=dict(root="SpamX.module"))
          print("Client 9 Found")
     else:
          RiZoeL9 = None
          pass    
 
-    if SESSION10:
-         RiZoeL10 = Client(name="SESSION10", api_id = API_ID, api_hash = API_HASH, session_string=SESSION10, plugins=dict(root="SpamX.module"))
+    if CLIENT10:
+       if ":" in CLIENT10:
+         RiZoeL10 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT10, plugins=dict(root="SpamX.bot"))
+         print("Bot token 10 Found")
+       else:
+         RiZoeL10 = Client(name="CLIENT10", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT10, plugins=dict(root="SpamX.module"))
          print("Client 10 Found")
     else:
          RiZoeL10 = None
          pass    
 
-    if SESSION11:
-         RiZoeL11 = Client(name="SESSION11", api_id = API_ID, api_hash = API_HASH, session_string=SESSION11, plugins=dict(root="SpamX.module"))
+    if CLIENT11:
+       if ":" in CLIENT11:
+         RiZoeL11 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT11, plugins=dict(root="SpamX.bot"))
+         print("Bot token 11 Found")
+       else:
+         RiZoeL11 = Client(name="CLIENT11", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT11, plugins=dict(root="SpamX.module"))
          print("Client 11 Found")
     else:
          RiZoeL11 = None
          pass    
 
-    if SESSION12:
-         RiZoeL12 = Client(name="SESSION12", api_id = API_ID, api_hash = API_HASH, session_string=SESSION12, plugins=dict(root="SpamX.module"))
+    if CLIENT12:
+       if ":" in CLIENT12:
+         RiZoeL12 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT12, plugins=dict(root="SpamX.bot"))
+         print("Bot token 12 Found")
+       else:
+         RiZoeL12 = Client(name="CLIENT12", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT12, plugins=dict(root="SpamX.module"))
          print("Client 12 Found")
     else:
          RiZoeL12 = None
          pass    
 
-    if SESSION13:
-         RiZoeL13 = Client(name="SESSION13", api_id = API_ID, api_hash = API_HASH, session_string=SESSION13, plugins=dict(root="SpamX.module"))
+    if CLIENT13:
+       if ":" in CLIENT13:
+         RiZoeL13 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT13, plugins=dict(root="SpamX.bot"))
+         print("Bot token 13 Found")
+       else:
+         RiZoeL13 = Client(name="CLIENT13", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT13, plugins=dict(root="SpamX.module"))
          print("Client 13 Found")
     else:
          RiZoeL13 = None
          pass    
 
-    if SESSION14:
-         RiZoeL14 = Client(name="SESSION14", api_id = API_ID, api_hash = API_HASH, session_string=SESSION14, plugins=dict(root="SpamX.module"))
+    if CLIENT14:
+       if ":" in CLIENT14:
+         RiZoeL14 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT14, plugins=dict(root="SpamX.bot"))
+         print("Bot token 14 Found")
+       else:
+         RiZoeL14 = Client(name="CLIENT14", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT14, plugins=dict(root="SpamX.module"))
          print("Client 14 Found")
     else:
          RiZoeL14 = None
          pass    
 
-    if SESSION15:
-         RiZoeL15 = Client(name="SESSION15", api_id = API_ID, api_hash = API_HASH, session_string=SESSION15, plugins=dict(root="SpamX.module"))
+    if CLIENT15:
+       if ":" in CLIENT15:
+         RiZoeL15 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT15, plugins=dict(root="SpamX.bot"))
+         print("Bot token 15 Found")
+       else:
+         RiZoeL15 = Client(name="CLIENT15", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT15, plugins=dict(root="SpamX.module"))
          print("Client 15 Found")
     else:
          RiZoeL15 = None
          pass    
 
-    if SESSION16:
-         RiZoeL16 = Client(name="SESSION16", api_id = API_ID, api_hash = API_HASH, session_string=SESSION16, plugins=dict(root="SpamX.module"))
+    if CLIENT16:
+       if ":" in CLIENT16:
+         RiZoeL16 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT16, plugins=dict(root="SpamX.bot"))
+         print("Bot token 16 Found")
+       else:
+         RiZoeL16 = Client(name="CLIENT16", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT16, plugins=dict(root="SpamX.module"))
          print("Client 16 Found")
     else:
          RiZoeL16 = None
          pass    
 
-    if SESSION17:
-         RiZoeL17 = Client(name="SESSION17", api_id = API_ID, api_hash = API_HASH, session_string=SESSION17, plugins=dict(root="SpamX.module"))
+    if CLIENT17:
+       if ":" in CLIENT17:
+         RiZoeL17 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT17, plugins=dict(root="SpamX.bot"))
+         print("Bot token 17 Found")
+       else:
+         RiZoeL17 = Client(name="CLIENT17", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT17, plugins=dict(root="SpamX.module"))
          print("Client 17 Found")
     else:
          RiZoeL17 = None
          pass    
 
-    if SESSION18:
-         RiZoeL18 = Client(name="SESSION18", api_id = API_ID, api_hash = API_HASH, session_string=SESSION18, plugins=dict(root="SpamX.module"))
+    if CLIENT18:
+       if ":" in CLIENT18:
+         RiZoeL18 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT18, plugins=dict(root="SpamX.bot"))
+         print("Bot token 18 Found")
+       else:
+         RiZoeL18 = Client(name="CLIENT18", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT18, plugins=dict(root="SpamX.module"))
          print("Client 18 Found")
     else:
          RiZoeL18 = None
          pass    
 
-    if SESSION19:
-         RiZoeL19 = Client(name="SESSION19", api_id = API_ID, api_hash = API_HASH, session_string=SESSION19, plugins=dict(root="SpamX.module"))
+    if CLIENT19:
+       if ":" in CLIENT19:
+         RiZoeL19 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT19, plugins=dict(root="SpamX.bot"))
+         print("Bot token 19 Found")
+       else:
+         RiZoeL19 = Client(name="CLIENT19", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT19, plugins=dict(root="SpamX.module"))
          print("Client 19 Found")
     else:
          RiZoeL19 = None
          pass    
 
-    if SESSION20:
-         RiZoeL20 = Client(name="SESSION20", api_id = API_ID, api_hash = API_HASH, session_string=SESSION20, plugins=dict(root="SpamX.module"))
+    if CLIENT20:
+       if ":" in CLIENT20:
+         RiZoeL20 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT20, plugins=dict(root="SpamX.bot"))
+         print("Bot token 20 Found")
+       else:
+         RiZoeL20 = Client(name="CLIENT20", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT20, plugins=dict(root="SpamX.module"))
          print("Client 20 Found")
     else:
          RiZoeL20 = None
