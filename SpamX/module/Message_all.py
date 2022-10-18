@@ -23,7 +23,7 @@ async def msgall(xspam: Client, e: Message):
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! You can't use this cmd in this Group-!**")
           await e.reply_text("Sending Message to all group members")
-          lol = xspam.send_message(user_if, "sending Message to all group Members !")
+          lol = xspam.send_message(user_id, "sending Message to all group Members !")
           ok = 0
           async for x in xspam.get_chat_members(chat_id):
                 c = x.user.id
