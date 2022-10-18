@@ -108,7 +108,7 @@ if CLIENT18:
        RiZoeL18.join_chat("DNHxHELL")
 if CLIENT19:
     RiZoeL19.start()
-    if not ":" in CLIENT18:
+    if not ":" in CLIENT19:
        RiZoeL19.join_chat("RiZoeLX")
        RiZoeL19.join_chat("DNHxHELL")
 if CLIENT20:
