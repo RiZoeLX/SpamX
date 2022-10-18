@@ -28,103 +28,103 @@
         "value": "",
         "required": true
       },
-      "SESSION": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": true
       },
-      "SESSION2": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT2": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION3": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT3": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION4": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT4": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION5": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT5": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION6": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT6": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION7": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT7": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION8": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT8": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION9": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT9": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION10": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT10": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION11": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT11": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION12": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT12": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION13": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT13": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION14": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT14": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION15": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT15": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION16": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT16": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION17": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT17": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION18": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT18": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION19": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT19": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },
-      "SESSION20": {
-        "description": "PYROGRAM SESSION Session",
+      "CLIENT20": {
+        "description": "Pyrogram String Session Or Bot Token",
         "value": "",
         "required": false
       },      
