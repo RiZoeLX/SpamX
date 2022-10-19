@@ -99,7 +99,7 @@ if CLIENT2:
        else:
          RiZoeL2 = Client(name="CLIENT2", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT2, plugins=dict(root="SpamX.module"))
          print("Client 2 Found")
-    else:
+else:
          RiZoeL2 = None
          
    
@@ -110,7 +110,7 @@ if CLIENT3:
        else:
          RiZoeL3 = Client(name="CLIENT3", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT3, plugins=dict(root="SpamX.module"))
          print("Client 3 Found")
-    else:
+else:
          RiZoeL3 = None
          
 
@@ -121,7 +121,7 @@ if CLIENT4:
        else:
          RiZoeL4 = Client(name="CLIENT4", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT4, plugins=dict(root="SpamX.module"))
          print("Client 4 Found")
-    else:
+else:
          RiZoeL4 = None
          
 
@@ -132,7 +132,7 @@ if CLIENT5:
        else:
          RiZoeL5 = Client(name="CLIENT5", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT5, plugins=dict(root="SpamX.module"))
          print("Client 5 Found")
-    else:
+else:
          RiZoeL5 = None
            
 
@@ -143,7 +143,7 @@ if CLIENT6:
        else:
          RiZoeL6 = Client(name="CLIENT6", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT6, plugins=dict(root="SpamX.module"))
          print("Client 6 Found")
-    else:
+else:
          RiZoeL6 = None
              
 
@@ -154,7 +154,7 @@ if CLIENT7:
        else:
          RiZoeL7 = Client(name="CLIENT7", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT7, plugins=dict(root="SpamX.module"))
          print("Client 7 Found")
-    else:
+else:
          RiZoeL7 = None
              
 
@@ -165,7 +165,7 @@ if CLIENT8:
        else:
          RiZoeL8 = Client(name="CLIENT8", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT8, plugins=dict(root="SpamX.module"))
          print("Client 8 Found")
-    else:
+else:
          RiZoeL8 = None
              
 
@@ -176,7 +176,7 @@ if CLIENT9:
        else:
          RiZoeL9 = Client(name="CLIENT9", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT9, plugins=dict(root="SpamX.module"))
          print("Client 9 Found")
-    else:
+else:
          RiZoeL9 = None
              
 
@@ -187,7 +187,7 @@ if CLIENT10:
        else:
          RiZoeL10 = Client(name="CLIENT10", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT10, plugins=dict(root="SpamX.module"))
          print("Client 10 Found")
-    else:
+else:
          RiZoeL10 = None
              
 
@@ -198,7 +198,7 @@ if CLIENT11:
        else:
          RiZoeL11 = Client(name="CLIENT11", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT11, plugins=dict(root="SpamX.module"))
          print("Client 11 Found")
-    else:
+else:
          RiZoeL11 = None
              
 
@@ -209,7 +209,7 @@ if CLIENT12:
        else:
          RiZoeL12 = Client(name="CLIENT12", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT12, plugins=dict(root="SpamX.module"))
          print("Client 12 Found")
-    else:
+else:
          RiZoeL12 = None
              
 
@@ -220,7 +220,7 @@ if CLIENT13:
        else:
          RiZoeL13 = Client(name="CLIENT13", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT13, plugins=dict(root="SpamX.module"))
          print("Client 13 Found")
-    else:
+else:
          RiZoeL13 = None
              
 
@@ -231,7 +231,7 @@ if CLIENT14:
        else:
          RiZoeL14 = Client(name="CLIENT14", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT14, plugins=dict(root="SpamX.module"))
          print("Client 14 Found")
-    else:
+else:
          RiZoeL14 = None
              
 
@@ -242,7 +242,7 @@ if CLIENT15:
        else:
          RiZoeL15 = Client(name="CLIENT15", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT15, plugins=dict(root="SpamX.module"))
          print("Client 15 Found")
-    else:
+else:
          RiZoeL15 = None
              
 
@@ -253,7 +253,7 @@ if CLIENT16:
        else:
          RiZoeL16 = Client(name="CLIENT16", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT16, plugins=dict(root="SpamX.module"))
          print("Client 16 Found")
-    else:
+else:
          RiZoeL16 = None
              
 
@@ -264,7 +264,7 @@ if CLIENT17:
        else:
          RiZoeL17 = Client(name="CLIENT17", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT17, plugins=dict(root="SpamX.module"))
          print("Client 17 Found")
-    else:
+else:
          RiZoeL17 = None
              
 
@@ -275,7 +275,7 @@ if CLIENT18:
        else:
          RiZoeL18 = Client(name="CLIENT18", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT18, plugins=dict(root="SpamX.module"))
          print("Client 18 Found")
-    else:
+else:
          RiZoeL18 = None
            
 
@@ -286,7 +286,7 @@ if CLIENT19:
        else:
          RiZoeL19 = Client(name="CLIENT19", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT19, plugins=dict(root="SpamX.module"))
          print("Client 19 Found")
-    else:
+else:
          RiZoeL19 = None
         
 
@@ -297,6 +297,6 @@ if CLIENT20:
        else:
          RiZoeL20 = Client(name="CLIENT20", api_id = API_ID, api_hash = API_HASH, session_string=CLIENT20, plugins=dict(root="SpamX.module"))
          print("Client 20 Found")
-    else:
+else:
          RiZoeL20 = None
 
