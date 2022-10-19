@@ -1,5 +1,5 @@
 python-decouple
-pyrogram
+pyrogram==1.4.16
 cryptg
 gitpython
 asyncio
