@@ -91,28 +91,8 @@ hl = HNDLR[0]
 start_time = time.time()
 
 #-------------------------CLIENTS-----------------------------
-async def SpamX():
-    global RiZoeL2
-    global RiZoeL3
-    global RiZoeL5
-    global RiZoeL4
-    global RiZoeL6
-    global RiZoeL7
-    global RiZoeL8
-    global RiZoeL9
-    global RiZoeL10
-    global RiZoeL11
-    global RiZoeL12
-    global RiZoeL13
-    global RiZoeL14
-    global RiZoeL15
-    global RiZoeL16
-    global RiZoeL17
-    global RiZoeL18
-    global RiZoeL19
-    global RiZoeL20
     
-    if CLIENT2:
+if CLIENT2:
        if ":" in CLIENT2:
          RiZoeL2 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT2, plugins=dict(root="SpamX.bot"))
          print("Bot token 2 Found")
@@ -121,9 +101,9 @@ async def SpamX():
          print("Client 2 Found")
     else:
          RiZoeL2 = None
-         pass
+         
    
-    if CLIENT3:
+if CLIENT3:
        if ":" in CLIENT3:
          RiZoeL3 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT3, plugins=dict(root="SpamX.bot"))
          print("Bot token 3 Found")
@@ -132,9 +112,9 @@ async def SpamX():
          print("Client 3 Found")
     else:
          RiZoeL3 = None
-         pass
+         
 
-    if CLIENT4:
+if CLIENT4:
        if ":" in CLIENT4:
          RiZoeL4 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT4, plugins=dict(root="SpamX.bot"))
          print("Bot token 4 Found")
@@ -143,9 +123,9 @@ async def SpamX():
          print("Client 4 Found")
     else:
          RiZoeL4 = None
-         pass
+         
 
-    if CLIENT5:
+if CLIENT5:
        if ":" in CLIENT5:
          RiZoeL5 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT5, plugins=dict(root="SpamX.bot"))
          print("Bot token 5 Found")
@@ -154,9 +134,9 @@ async def SpamX():
          print("Client 5 Found")
     else:
          RiZoeL5 = None
-         pass  
+           
 
-    if CLIENT6:
+if CLIENT6:
        if ":" in CLIENT6:
          RiZoeL6 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT6, plugins=dict(root="SpamX.bot"))
          print("Bot token 6 Found")
@@ -165,9 +145,9 @@ async def SpamX():
          print("Client 6 Found")
     else:
          RiZoeL6 = None
-         pass    
+             
 
-    if CLIENT7:
+if CLIENT7:
        if ":" in CLIENT7:
          RiZoeL7 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT7, plugins=dict(root="SpamX.bot"))
          print("Bot token 7 Found")
@@ -176,9 +156,9 @@ async def SpamX():
          print("Client 7 Found")
     else:
          RiZoeL7 = None
-         pass    
+             
 
-    if CLIENT8:
+if CLIENT8:
        if ":" in CLIENT8:
          RiZoeL8 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT8, plugins=dict(root="SpamX.bot"))
          print("Bot token 8 Found")
@@ -187,9 +167,9 @@ async def SpamX():
          print("Client 8 Found")
     else:
          RiZoeL8 = None
-         pass    
+             
 
-    if CLIENT9:
+if CLIENT9:
        if ":" in CLIENT9:
          RiZoeL9 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT9, plugins=dict(root="SpamX.bot"))
          print("Bot token 9 Found")
@@ -198,9 +178,9 @@ async def SpamX():
          print("Client 9 Found")
     else:
          RiZoeL9 = None
-         pass    
+             
 
-    if CLIENT10:
+if CLIENT10:
        if ":" in CLIENT10:
          RiZoeL10 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT10, plugins=dict(root="SpamX.bot"))
          print("Bot token 10 Found")
@@ -209,9 +189,9 @@ async def SpamX():
          print("Client 10 Found")
     else:
          RiZoeL10 = None
-         pass    
+             
 
-    if CLIENT11:
+if CLIENT11:
        if ":" in CLIENT11:
          RiZoeL11 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT11, plugins=dict(root="SpamX.bot"))
          print("Bot token 11 Found")
@@ -220,9 +200,9 @@ async def SpamX():
          print("Client 11 Found")
     else:
          RiZoeL11 = None
-         pass    
+             
 
-    if CLIENT12:
+if CLIENT12:
        if ":" in CLIENT12:
          RiZoeL12 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT12, plugins=dict(root="SpamX.bot"))
          print("Bot token 12 Found")
@@ -231,9 +211,9 @@ async def SpamX():
          print("Client 12 Found")
     else:
          RiZoeL12 = None
-         pass    
+             
 
-    if CLIENT13:
+if CLIENT13:
        if ":" in CLIENT13:
          RiZoeL13 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT13, plugins=dict(root="SpamX.bot"))
          print("Bot token 13 Found")
@@ -242,9 +222,9 @@ async def SpamX():
          print("Client 13 Found")
     else:
          RiZoeL13 = None
-         pass    
+             
 
-    if CLIENT14:
+if CLIENT14:
        if ":" in CLIENT14:
          RiZoeL14 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT14, plugins=dict(root="SpamX.bot"))
          print("Bot token 14 Found")
@@ -253,9 +233,9 @@ async def SpamX():
          print("Client 14 Found")
     else:
          RiZoeL14 = None
-         pass    
+             
 
-    if CLIENT15:
+if CLIENT15:
        if ":" in CLIENT15:
          RiZoeL15 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT15, plugins=dict(root="SpamX.bot"))
          print("Bot token 15 Found")
@@ -264,9 +244,9 @@ async def SpamX():
          print("Client 15 Found")
     else:
          RiZoeL15 = None
-         pass    
+             
 
-    if CLIENT16:
+if CLIENT16:
        if ":" in CLIENT16:
          RiZoeL16 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT16, plugins=dict(root="SpamX.bot"))
          print("Bot token 16 Found")
@@ -275,9 +255,9 @@ async def SpamX():
          print("Client 16 Found")
     else:
          RiZoeL16 = None
-         pass    
+             
 
-    if CLIENT17:
+if CLIENT17:
        if ":" in CLIENT17:
          RiZoeL17 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT17, plugins=dict(root="SpamX.bot"))
          print("Bot token 17 Found")
@@ -286,9 +266,9 @@ async def SpamX():
          print("Client 17 Found")
     else:
          RiZoeL17 = None
-         pass    
+             
 
-    if CLIENT18:
+if CLIENT18:
        if ":" in CLIENT18:
          RiZoeL18 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT18, plugins=dict(root="SpamX.bot"))
          print("Bot token 18 Found")
@@ -297,9 +277,9 @@ async def SpamX():
          print("Client 18 Found")
     else:
          RiZoeL18 = None
-         pass    
+           
 
-    if CLIENT19:
+if CLIENT19:
        if ":" in CLIENT19:
          RiZoeL19 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT19, plugins=dict(root="SpamX.bot"))
          print("Bot token 19 Found")
@@ -308,9 +288,9 @@ async def SpamX():
          print("Client 19 Found")
     else:
          RiZoeL19 = None
-         pass    
+        
 
-    if CLIENT20:
+if CLIENT20:
        if ":" in CLIENT20:
          RiZoeL20 = Client('SpamX', api_id=API_ID, api_hash=API_HASH, bot_token=CLIENT20, plugins=dict(root="SpamX.bot"))
          print("Bot token 20 Found")
@@ -319,9 +299,4 @@ async def SpamX():
          print("Client 20 Found")
     else:
          RiZoeL20 = None
-         pass
 
-     
-
-loop = asyncio.get_event_loop()
-loop.run_until_complete(SpamX())
