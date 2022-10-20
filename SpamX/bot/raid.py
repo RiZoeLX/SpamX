@@ -78,12 +78,11 @@ RUSERs = []
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["rraid", "replyraid"], prefixes=HNDLR))
 async def rraid(xspam: Client, e: Message):
       global RUSERs
-      Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-      if len(Rizoel) == 2:
-          counts = int(Rizoel[0])
+      Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
+      if Rizoel:
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          ok = await xspam.get_users(Rizoel[1])
+          ok = await xspam.get_users(Rizoel[0])
           id = ok.id
           if int(id) in RiZoeLX:
                 text = f"I can't raid on @RiZoeLX's Owner"
@@ -101,11 +100,8 @@ async def rraid(xspam: Client, e: Message):
               msg = f"Reply Raid Activated Successfully On User {mention}"
               await e.reply_text(msg)
       elif e.reply_to_message:
-          #msg_id = e.reply_to_message.message_id
-          counts = int(Rizoel[0])
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          #RiZoeL = xspam.get_messages(e.chat.id, msg_id)
           user_id = e.reply_to_message.from_user.id
           ok = await xspam.get_users(user_id)
           id = ok.id
@@ -138,11 +134,10 @@ async def rraid(xspam: Client, e: Message):
 async def draid(xspam: Client, e: Message):
       global RUSERs
       Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-      if len(Rizoel) == 2:
-          counts = int(Rizoel[0])
+      if Rizoel:
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          ok = await xspam.get_users(Rizoel[1])
+          ok = await xspam.get_users(Rizoel[0])
           id = ok.id
           if int(id) in RiZoeLX:
                 text = f"I can't raid on @RiZoeLX's Owner"
@@ -160,10 +155,8 @@ async def draid(xspam: Client, e: Message):
               msg = "Reply Raid Deactivated Successfully"
               await e.reply_text(msg)
       elif e.reply_to_message:
-          counts = int(Rizoel[0])
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          #RiZoeL = xspam.get_messages(e.chat.id, msg_id)
           user_id = e.reply_to_message.from_user.id
           ok = await xspam.get_users(user_id)
           id = ok.id
@@ -192,7 +185,7 @@ async def draid(xspam: Client, e: Message):
              pass
 
 
-@Client.on_message(~filters.service, group=1)
+@Client.on_message( ~filters.me & filters.incoming)
 async def watcher(_, msg: Message):
     global RUSERs
     id = msg.from_user.id
