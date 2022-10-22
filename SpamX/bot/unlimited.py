@@ -114,9 +114,9 @@ async def raid(xspam: Client, e: Message):
              pass
            
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["abuse", "gali"], prefixes=HNDLR))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["abuse"], prefixes=HNDLR))
 async def abuse(xspam: Client, e: Message): 
-     args = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+     args = e.text[7:] 
      if args:
           counts = int(args[0])
           if int(e.chat.id) in GROUP:
