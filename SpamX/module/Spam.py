@@ -106,7 +106,7 @@ async def raid(xspam: Client, e: Message):
                     reply = choice(RAID)
                     msg = f"{mention} {reply}"
                     await xspam.send_message(e.chat.id, msg)
-                    await asyncio.sleep(0.10)
+                    await asyncio.sleep(0.3)
       elif e.reply_to_message:
           #msg_id = e.reply_to_message.message_id
           counts = int(Rizoel[0])
@@ -132,7 +132,7 @@ async def raid(xspam: Client, e: Message):
                     reply = choice(RAID)
                     msg = f"{mention} {reply}"
                     await xspam.send_message(e.chat.id, msg)
-                    await asyncio.sleep(0.10)
+                    await asyncio.sleep(0.3)
       else:
           await e.reply_text(usage)
       if LOGS_CHANNEL:
@@ -157,11 +157,11 @@ async def fastspam(xspam: Client, e: Message):
           reply_to_id = e.reply_to_message.message_id
           for _ in range(counts):
               await xspam.send_message(e.chat.id, msg, reply_to_message_id=reply_to_id)
-              await asyncio.sleep(0.002)
+              await asyncio.sleep(0.3)
           return
        for _ in range(counts):
            await xspam.send_message(e.chat.id, msg)
-           await asyncio.sleep(0.002)
+           await asyncio.sleep(0.3)
     else:
         await e.reply_text(usage)
     if LOGS_CHANNEL:
