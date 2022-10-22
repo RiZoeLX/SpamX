@@ -36,7 +36,7 @@ async def raid(xspam: Client, e: Message):
                     reply = choice(RAID)
                     msg = f"{mention} {reply}"
                     await xspam.send_message(e.chat.id, msg)
-                    await asyncio.sleep(0.10)
+                    await asyncio.sleep(0.3)
       elif e.reply_to_message:
           #msg_id = e.reply_to_message.message_id
           counts = int(Rizoel[0])
@@ -62,7 +62,7 @@ async def raid(xspam: Client, e: Message):
                     reply = choice(RAID)
                     msg = f"{mention} {reply}"
                     await xspam.send_message(e.chat.id, msg)
-                    await asyncio.sleep(0.10)
+                    await asyncio.sleep(0.3)
       else:
           await e.reply_text(usage)
       if LOGS_CHANNEL:
@@ -133,7 +133,7 @@ async def rraid(xspam: Client, e: Message):
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["draid", "dreplyraid"], prefixes=HNDLR))
 async def draid(xspam: Client, e: Message):
       global RUSERs
-      Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
+      Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
       if Rizoel:
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! i Can't Spam Here.**")
