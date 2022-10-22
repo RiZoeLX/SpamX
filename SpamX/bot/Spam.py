@@ -50,7 +50,7 @@ async def delayspam(xspam: Client, e: Message):
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["ispam", "inlinespam"], prefixes=HNDLR))
-async def fastspam(xspam: Client, e: Message):
+async def ispam(xspam: Client, e: Message):
     Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     if len(Rizoel) == 2:
        counts = int(Rizoel[0])
@@ -71,8 +71,7 @@ async def fastspam(xspam: Client, e: Message):
     elif int(id) in SUDO_USERS:
       text = f"This guy is a sudo user."
       await e.reply_text(text)
-    else:
-        
+    else:      
         fname = x.first_name
         link = choice(PORM)
         mention = f"[{fname}](tg://user?id={id})"
@@ -81,7 +80,7 @@ async def fastspam(xspam: Client, e: Message):
           msg = f"{mention} {reply}"
           btn = InlineKeyboardMarkup([[InlineKeyboardButton(f"{fname} Mom's porno", url=f"{link}")]])
           await xspam.send_message(e.chat.id, msg, reply_markup=btn)
-          await asyncio.sleep(0.02)
+          await asyncio.sleep(0.3)
     
     if LOGS_CHANNEL:
          try:
@@ -130,11 +129,11 @@ async def fastspam(xspam: Client, e: Message):
           reply_to_id = e.reply_to_message.message_id
           for _ in range(counts):
               await xspam.send_message(e.chat.id, msg, reply_to_message_id=reply_to_id)
-              await asyncio.sleep(0.002)
+              await asyncio.sleep(0.3)
           return
        for _ in range(counts):
            await xspam.send_message(e.chat.id, msg)
-           await asyncio.sleep(0.002)
+           await asyncio.sleep(0.3)
     else:
         await e.reply_text(usage)
     if LOGS_CHANNEL:
