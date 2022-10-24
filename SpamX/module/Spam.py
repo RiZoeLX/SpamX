@@ -148,22 +148,24 @@ async def fastspam(xspam: Client, e: Message):
     Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     if len(Rizoel) == 2:
        counts = int(Rizoel[0])
-       if int(e.chat.id) in GROUP:
-            return await e.reply_text("**Sorry !! i Can't Spam Here.**")
        msg = str(Rizoel[1])
        if re.search(Owners.lower(), msg.lower()):
             return await e.reply("**Sorry !!** I can't Spam On @RiZoeLX's owner")
-       if e.reply_to_message:
-          reply_to_id = e.reply_to_message.message_id
-          for _ in range(counts):
-              await xspam.send_message(e.chat.id, msg, reply_to_message_id=reply_to_id)
-              await asyncio.sleep(0.3)
-          return
-       for _ in range(counts):
+    if e.reply_to_message:
+        msg = e.reply_to_message.text.markdown
+        if re.search(Owners.lower(), msg.lower()):
+            return await e.reply("**Sorry !!** I can't Spam On @RiZoeLX's owner")
+        counts = int(Rizoel[0])
+    else:
+        return await e.reply_text(usage)
+   
+    if int(e.chat.id) in GROUP:
+            return await e.reply_text("**Sorry !! i Can't Spam Here.**")
+     
+    for _ in range(counts):
            await xspam.send_message(e.chat.id, msg)
            await asyncio.sleep(0.3)
-    else:
-        await e.reply_text(usage)
+
     if LOGS_CHANNEL:
          try:
             await xspam.send_message(LOGS_CHANNEL, f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
