@@ -79,69 +79,6 @@ async def pornspam(xspam: Client, e: Message):
     else:
          await e.reply_text(usage)
 
-
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["raid"], prefixes=HNDLR))
-@Client.on_message(filters.me & filters.command(["raid"], prefixes=HNDLR))
-async def raid(xspam: Client, e: Message):  
-      Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-      if len(Rizoel) == 2:
-          counts = int(Rizoel[0])
-          if int(e.chat.id) in GROUP:
-               return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          ok = await xspam.get_users(Rizoel[1])
-          id = ok.id
-          if int(id) in RiZoeLX:
-                text = f"I can't raid on @RiZoeLX's Owner"
-                await e.reply_text(text)
-          elif int(id) == OWNER_ID:
-                text = f"This guy is The Owner Of these Bots."
-                await e.reply_text(text)
-          elif int(id) in SUDO_USERS:
-                text = f"This guy is sudo user."
-                await e.reply_text(text)
-          else:
-              fname = ok.first_name
-              mention = f"[{fname}](tg://user?id={id})"
-              for _ in range(counts):
-                    reply = choice(RAID)
-                    msg = f"{mention} {reply}"
-                    await xspam.send_message(e.chat.id, msg)
-                    await asyncio.sleep(0.3)
-      elif e.reply_to_message:
-          #msg_id = e.reply_to_message.message_id
-          counts = int(Rizoel[0])
-          if int(e.chat.id) in GROUP:
-               return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          #RiZoeL = xspam.get_messages(e.chat.id, msg_id)
-          user_id = e.reply_to_message.from_user.id
-          ok = await xspam.get_users(user_id)
-          id = ok.id
-          if int(id) in RiZoeLX:
-                text = f"I can't raid on @RiZoeLX's Owner"
-                await e.reply_text(text)
-          elif int(id) == OWNER_ID:
-                text = f"This guy is the Owner Of these Bots."
-                await e.reply_text(text)
-          elif int(id) in SUDO_USERS:
-                text = f"This guy is sudo user."
-                await e.reply_text(text)
-          else:
-              fname = ok.first_name
-              mention = f"[{fname}](tg://user?id={id})"
-              for _ in range(counts):
-                    reply = choice(RAID)
-                    msg = f"{mention} {reply}"
-                    await xspam.send_message(e.chat.id, msg)
-                    await asyncio.sleep(0.3)
-      else:
-          await e.reply_text(usage)
-      if LOGS_CHANNEL:
-         try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Raid By User: {e.from_user.id} \n\n On User: {mention} \n Chat: {e.chat.id} \n Counts: {counts}")
-         except Exception as a:
-             print(a)
-             pass
-
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["fspam", "fastspam", "spam", "bigspam"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["fspam", "fastspam", "spam", "bigspam"], prefixes=HNDLR))
 async def fastspam(xspam: Client, e: Message):
