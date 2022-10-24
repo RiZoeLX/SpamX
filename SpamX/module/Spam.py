@@ -306,7 +306,7 @@ async def abuse(xspam: Client, e: Message):
           for _ in range(counts):
               msg = choice(WORD)
               await xspam.send_message(e.chat.id, msg)
-              await asyncio.sleep(0.001)
+              await asyncio.sleep(0.2)
      else:
           global unlimited
           unlimited = True
