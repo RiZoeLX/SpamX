@@ -88,7 +88,7 @@ async def fastspam(xspam: Client, e: Message):
        msg = str(Rizoel[1])
        if re.search(Owners.lower(), msg.lower()):
             return await e.reply("**Sorry !!** I can't Spam On @RiZoeLX's owner")
-    if e.reply_to_message:
+    elif e.reply_to_message:
         msg = e.reply_to_message.text.markdown
         if re.search(Owners.lower(), msg.lower()):
             return await e.reply("**Sorry !!** I can't Spam On @RiZoeLX's owner")
