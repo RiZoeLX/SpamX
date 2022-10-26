@@ -116,7 +116,7 @@ async def pornspam(xspam: Client, e: Message):
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["fspam", "fastspam", "spam", "bigspam"], prefixes=HNDLR))
-async def fastspam(xspam: Client, e: Message):
+async def spam(xspam: Client, e: Message):
     Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     if len(Rizoel) == 2:
        counts = int(Rizoel[0])
@@ -171,7 +171,7 @@ unlimited = False
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["uspam"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["uspam"], prefixes=HNDLR))
-async def fastspam(xspam: Client, e: Message):
+async def uspam(xspam: Client, e: Message):
     global unlimited
     unlimited = True
     if int(e.chat.id) in GROUP:
@@ -196,7 +196,7 @@ async def fastspam(xspam: Client, e: Message):
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["uraid"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["uraid"], prefixes=HNDLR))
-async def raid(xspam: Client, e: Message):
+async def uraid(xspam: Client, e: Message):
       global unlimited
       unlimited = True
       Rizoel = e.text[6:]
@@ -292,7 +292,7 @@ async def abuse(xspam: Client, e: Message):
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["stop"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["stop"], prefixes=HNDLR))
-async def spam(_, e: Message):
+async def stop(_, e: Message):
        global unlimited
        unlimited = False
        await e.reply_text("Stopped Unlimited Spam/Raid/abuse -;")
