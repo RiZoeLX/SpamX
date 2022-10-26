@@ -166,7 +166,7 @@ async def uspam(xspam: Client, e: Message):
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["uraid"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["uraid"], prefixes=HNDLR))
-async def raid(xspam: Client, e: Message):
+async def uraid(xspam: Client, e: Message):
       global unlimited
       unlimited = True
       Rizoel = e.text[6:]
