@@ -59,7 +59,7 @@ syntax:
 {hl}hang (counts)
 
 
-**© @RiZoeLX**
+**© @jelibonvsp**
 """
 
 
@@ -78,7 +78,7 @@ command:
 command:
   {hl}dmraid (count) (username or user id)
 
-**© @RiZoeLX**
+**© @jelibonvsp**
 """
 
 leave_help = f"""
@@ -89,7 +89,7 @@ syntax:
 i) {hl}leave group Username or chat user id
 ii) {hl}leave
 
-**© @RiZoeLX**
+**© @jelibonvsp**
 """
 
 userbot_help = f"""
@@ -101,7 +101,7 @@ userbot_help = f"""
 
 - {hl}restart : To Restart Your Spam Bots
 
-**© @RiZoeLX**
+**© @jelibonvsp**
 """
 
 help_menu = f"""
@@ -120,7 +120,7 @@ help_menu = f"""
 **Type** {hl}help (category) **to get all syntax in that category and its usage**
 **Example**: `{hl}help spam`
 
-**© @RiZoeLX**
+**© @jelibonvsp**
 """
 
 
@@ -143,5 +143,5 @@ syntax:
 
 **stop cmd**: Simply type {hl}stop to stop spam/abuse/raid any of that 
 
-**© @RiZoeLX**
+**© @jelibonvsp**
 """
