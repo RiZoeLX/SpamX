@@ -3,8 +3,6 @@
 # Don't Kang Bitch -!
 
 
-
-
 import os
 import sys
 from random import choice
@@ -173,15 +171,15 @@ syntax:
 
 **Unlimited raid**
 syntax:
- {hl}uraid (username or user id / reply to user)
+ {hl}uraid (username or user id or reply to user)
 
-**Abuse / One Word**
+**Abuse or One Word**
 syntax:
   {hl}absue (counts)
 
   **Read**: if you want unlimited abuse simply type {hl}abuse -!
 
-**stop cmd**: Simply type {hl}stop to stop spam/abuse/raid any of that 
+**stop cmd**: Simply type {hl}stop to stop spam or abuse or raid any of that 
 
 **Message all**: this cmd is use to message all group members
 Syntax:
