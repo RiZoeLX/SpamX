@@ -22,19 +22,20 @@ async def msgall(xspam: Client, e: Message):
           msg = str(fuk)
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! You can't use this cmd in this Group-!**")
-          await e.reply_text("Sending Message to all group members")
-          lol = xspam.send_message(user_id, "sending Message to all group Members !")
+          await e.reply_text("__Sending Message to all group members__")
+          lol = await xspam.send_message(user_id, "sending Message to all group Members !")
           ok = 0
+          f = 0
           async for x in xspam.get_chat_members(chat_id):
-                c = x.user.id
-                try:
-                    ok += 1
-                    await xspam.send_message(c, msg)
-                    await asyncio.sleep(3)
-                    await lol.edit_text(f"Message sent to {ok} members")
-                except Exception as a:
-                    print(a)
-                    await lol.edit_text(f" Error -! {a}")
+             c = x.user.id
+             try:
+                ok += 1
+                await xspam.send_message(c, msg)
+                await asyncio.sleep(3)
+             except Exception as a:
+                f += 1
+                print(a)
+          return await lol.edit_text(f"Messaged all group members! \n\nsent to `{ok}` users \nfailed: `{f}`")
 
       else:
            await e.reply_text(f"**Wrong usage -!** \n\n Syntax: \n {HNDLR}msgall (Your message)")
