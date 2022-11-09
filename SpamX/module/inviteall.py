@@ -5,22 +5,25 @@ import asyncio
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command(["scrape", "inviteall"], prefixes=HNDLR))
 @Client.on_message(filters.me & filters.command(["scrape", "inviteall"], prefixes=HNDLR))
-async def inviteall(client: Client, message: Message):
-    Msg = await message.reply_text(f"Gime Title also\n ex: {HNDLR}inviteall @chatlink")
-    text = message.text.split(" ", 1)
-    queryy = text[1]
-    chat = await client.get_chat(queryy)
-    tgchat = message.chat
-    """ Plugin Credits Zaid Userbot """
-    await client.join_chat(chat.username)
-    await Msg.edit_text(f"inviting users from {chat.username}")
-    async for member in client.iter_chat_members(chat.id):
-        user= member.user
-        zxb= ["online", "offline" , "recently", "within_week"]
-        if user.status in zxb:
-           try:
-            await client.add_chat_members(tgchat.id, user.id)
-           except Exception as e:
-            mg= await client.send_message("me", f"error-   {e}")
-            await asyncio.sleep(0.3)
-            await mg.delete()
+async def scrape_members(SpamX: Client, message: Message):
+   txt = "".join(message.text.split(maxsplit=1)[1:]).split(" ", 1)
+   if txt:
+      xchat = str(txt[0])
+      try:
+         cht = await SpamX.get_chat(xchat)
+         await SpamX.join_chat(cht.username)
+      except Exception as a:
+         return await message.reply_text(str(a))
+      await message.reply(f"inviting users from @{cht.username}")
+      added = 0
+      async for x in SpamX.get_chat_members(cht.id):
+        user = x.user.id
+        try:
+           await SpamX.add_chat_members(message.chat.id, user)
+           added += 1
+           await asyncio.sleep(2)
+        except Exception as a:
+           print(str(a))
+      return await Spamx.send_message(message.chat.id, f"**Users Added!** \nFrom chat: @{cht.username} \nTotal users added: `{added}` \n\n © @RiZoeLX")
+   else:
+      await message.reply_text(f"*#Wrong usage** \n syntax: {HNDLR}scrape @chatlink")
