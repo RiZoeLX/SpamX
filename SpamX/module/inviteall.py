@@ -14,7 +14,7 @@ async def scrape_members(SpamX: Client, message: Message):
          await SpamX.join_chat(cht.username)
       except Exception as a:
          return await message.reply_text(str(a))
-      await message.reply(f"inviting users from @{cht.username}")
+      await message.reply_text(f"inviting users from @{cht.username}")
       added = 0
       async for x in SpamX.get_chat_members(cht.id):
         user = x.user.id
