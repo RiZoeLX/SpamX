@@ -51,40 +51,53 @@ async def delayspam(xspam: Client, e: Message):
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["ispam", "inlinespam"], prefixes=HNDLR))
 async def ispam(xspam: Client, e: Message):
-    Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-    if len(Rizoel) == 2:
-       counts = int(Rizoel[0])
-       x = await xspam.get_users(Rizoel[1])
-    elif e.reply_to_message:
-       counts = int(Rizoel[0])
-       hm = e.reply_to_message.from_user.id
-       x = await xspam.get_users(user_id)
-    else:
-       return await e.reply_text(usage)
-    id = x.id
-    if int(id) in RiZoeLX:
-      text = f"I can't raid on @RiZoeLX's Owner"
-      await e.reply_text(text)
-    elif int(id) == OWNER_ID:
-      text = f"This guy is Owner Of this Bots."
-      await e.reply_text(text)
-    elif int(id) in SUDO_USERS:
-      text = f"This guy is a sudo user."
-      await e.reply_text(text)
-    else:      
-        fname = x.first_name
-        link = choice(PORM)
-        mention = f"[{fname}](tg://user?id={id})"
-        for _ in range(counts):
-          reply = choice(RAID)
-          msg = f"{mention} {reply}"
-          btn = InlineKeyboardMarkup([[InlineKeyboardButton(f"{fname} Mom's porno", url=f"{link}")]])
-          await xspam.send_message(e.chat.id, msg, reply_markup=btn)
-          await asyncio.sleep(0.3)
+      Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
+      if len(Rizoel) == 2:
+        counts = int(Rizoel[0])
+        if not counts:
+          await e.reply_text(f"Gime raid Counts or use `{HNDLR}.uraid` for Unlimited raid!")
+          return
+        hm = Rizoel[1]
+        if not hm:
+          await e.reply_text("you need to specify an user! Reply to any user or gime id/username")
+          return
+        try:
+           user = await xspam.get_users(Rizoel[1])
+        except:
+           await e.reply_text("**Error:** User not found!")
+           return
+      elif e.reply_to_message:
+        counts = int(Rizoel[0])
+        try:
+           user = await xspam.get_users(e.reply_to_message.from_user.id)
+        except:
+           user = e.reply_to_message.from_user 
+      else:
+        await e.reply_text(usage)
+        return
+      if int(e.chat.id) in GROUP:
+         await e.reply_text("**Sorry !! i Can't Spam Here.**")
+         return
+      if int(user.id) in RiZoeLX:
+         await e.reply_text("I can't raid on @RiZoeLX's Owner")
+         return
+      if int(user.id) == OWNER_ID:
+         await e.reply_text("This guy is Owner Of these Bots.")
+         return
+      if int(user.id) in SUDO_USERS:
+         if e.from_user.id != OWNER_ID:
+           await e.reply_text("This guy is a sudo users.")
+           return
+      mention = user.mention
+      for _ in range(counts): 
+         spam_msg = f"{mention} {choice(RAID)}"
+         spam_button = [[InlineKeyboardButton(f"{user.first_name} Mom's porno", url=f"{choice(PORM)}")]]
+         await xspam.send_message(e.chat.id, spam_msg, reply_markup=InlineKeyboardMarkup(spam_button))
+         await asyncio.sleep(0.3)
     
-    if LOGS_CHANNEL:
+      if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Inline Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
+            await xspam.send_message(LOGS_CHANNEL, f"started Inline Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n On user: {mention}")
          except Exception as a:
              print(a)
              pass
@@ -138,7 +151,7 @@ async def spam(xspam: Client, e: Message):
         await e.reply_text(usage)
     if LOGS_CHANNEL:
          try:
-            await xspam.send_message(LOGS_CHANNEL, f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
+            await xspam.send_message(LOGS_CHANNEL, f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam message: {msg}")
          except Exception as a:
              print(a)
              pass
