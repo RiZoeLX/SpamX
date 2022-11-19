@@ -26,4 +26,4 @@ async def scrape_members(SpamX: Client, message: Message):
            print(str(a))
       return await Spamx.send_message(message.chat.id, f"**Users Added!** \nFrom chat: @{cht.username} \nTotal users added: `{added}` \n\n © @RiZoeLX")
    else:
-      await message.reply_text(f"*#Wrong usage** \n syntax: {HNDLR}scrape @chatlink")
+      await message.reply_text(f"**Wrong usage** \n syntax: {HNDLR}scrape @chatlink")
