@@ -1,5 +1,5 @@
 python-decouple
-pyrogram==2.0.59
+pyrogram==2.0.62
 cryptg
 gitpython
 asyncio
