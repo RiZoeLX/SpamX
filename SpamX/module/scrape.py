@@ -7,6 +7,9 @@ import asyncio
 @Client.on_message(filters.me & filters.command(["scrape", "inviteall"], prefixes=HNDLR))
 async def scrape_members(SpamX: Client, message: Message):
    txt = "".join(message.text.split(maxsplit=1)[1:]).split(" ", 1)
+   if message.chat.id == e.from_user.id:
+     await message.reply_text("Use this CMD in group;")
+     return
    if txt:
       xchat = str(txt[0])
       try:
