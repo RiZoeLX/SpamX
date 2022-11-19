@@ -55,7 +55,7 @@ async def ispam(xspam: Client, e: Message):
       if len(Rizoel) == 2:
         counts = int(Rizoel[0])
         if not counts:
-          await e.reply_text(f"Gime raid Counts or use `{HNDLR}.uraid` for Unlimited raid!")
+          await e.reply_text("Gime spam Counts")
           return
         hm = Rizoel[1]
         if not hm:
