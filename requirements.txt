@@ -1,7 +1,5 @@
-python-decouple
 pyrogram==2.0.62
-cryptg
-gitpython
-asyncio
-python-dotenv
 tgcrypto
+python-dotenv[cli]
+python-dotenv
+gitpython
