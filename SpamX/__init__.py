@@ -53,6 +53,8 @@ if LOGS_CHANNEL:
         quit()
     
 HNDLR = os.getenv("HNDLR", ".")
+if not HNDLR:
+   HNDLR = "."
 OWNER_ID = int(os.environ.get("OWNER_ID", None))
 
 def make_int(str_input):
