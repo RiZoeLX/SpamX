@@ -84,7 +84,7 @@ else:
    print("Client 1 Found")
 
 start_time = time.time()
-
+hl = HNDLR
 #-------------------------CLIENTS-----------------------------
     
 if CLIENT2:
