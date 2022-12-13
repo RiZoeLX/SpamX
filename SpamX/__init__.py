@@ -83,8 +83,6 @@ else:
    RiZoeL = Client('CLIENT', api_id = API_ID, api_hash = API_HASH, session_string=CLIENT, plugins=dict(root="SpamX.module"))
    print("Client 1 Found")
 
-
-hl = HNDLR[0]
 start_time = time.time()
 
 #-------------------------CLIENTS-----------------------------
