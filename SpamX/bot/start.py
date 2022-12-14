@@ -17,7 +17,7 @@ btn = InlineKeyboardMarkup(
                         "• Support •", url="https://t.me/DNHxHELL")
                 ], [
                     InlineKeyboardButton(
-                        "• Repo •", url="https://github.com/The-HellBot/ArrayCore")
+                        "• Repo •", url="https://github.com/RiZoeLX/SpamX")
                 ]]
             )
  
