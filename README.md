@@ -9,14 +9,10 @@
 
 <h4> SpamX Is A Pyrogram Based Spam Bots For Telegram With Many Features </h4>
 <br>
-<h3 align="center"> Features °</h3>
+<h3 align="center"> Requirements</h3>
 
-- [x] Fast And Stable
-- [x] Deploy Upto 20 Clients
-- [x] Spam | pornspam | Dm Spam
-- [x] Raid | Dm Riad
-- [x] Profile Change cmds
-- [x] Broadcast Cmd
+- [pyrogram](https://github.com/pyrogram/pyrogram)
+- [pyRiZoeLX](https://github.com/RiZoeLX/SpamX)
 
 ----
 
