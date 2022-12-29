@@ -1,0 +1,54 @@
+""" RiZoeLX 2022 © SpamX """
+import os
+import sys
+
+from dotenv import load_dotenv
+from pyrogram import Client
+from RiZoeLX.functions import check_logchannel
+
+if os.path.exists(".env"):
+    load_dotenv(".env")
+
+# -------------CONFIGS--------------------
+API_ID = int(os.getenv("API_ID", ""))
+API_HASH = os.getenv("API_HASH", "")
+ALIVE_PIC = os.getenv("ALIVE_PIC", "")
+ALIVE_MSG = os.getenv("ALIVE_MSG", "")
+PING_MSG = os.getenv("PING_MSG", "")
+CLIENT = os.getenv("CLIENT", None)
+if not CLIENT:
+   print("SpamX [INFO]: You have to fill CLIENT var!")
+   sys.exit()
+CLIENT2 = os.getenv("CLIENT2", None)
+CLIENT3 = os.getenv("CLIENT3", None)
+CLIENT4 = os.getenv("CLIENT4", None)
+CLIENT5 = os.getenv("CLIENT5", None)
+CLIENT6 = os.getenv("CLIENT6", None)
+CLIENT7 = os.getenv("CLIENT7", None)
+CLIENT8 = os.getenv("CLIENT8", None)
+CLIENT9 = os.getenv("CLIENT9", None)
+CLIENT10 = os.getenv("CLIENT10", None)
+CLIENT11 = os.getenv("CLIENT11", None)
+CLIENT12 = os.getenv("CLIENT12", None)
+CLIENT13 = os.getenv("CLIENT13", None)
+CLIENT14 = os.getenv("CLIENT14", None)
+CLIENT15 = os.getenv("CLIENT15", None)
+CLIENT16 = os.getenv("CLIENT16", None)
+CLIENT17 = os.getenv("CLIENT17", None)
+CLIENT18 = os.getenv("CLIENT18", None)
+CLIENT19 = os.getenv("CLIENT19", None)
+CLIENT20 = os.getenv("CLIENT20", None)
+LOGS_CHANNEL = os.getenv("LOGS_CHANNEL", None)
+if LOGS_CHANNEL:
+   if check_logchannel(LOGS_CHANNEL):
+      print("SpamX [INFO]: You Can't Use That Chat As A Log Channel -!")
+      print("SpamX [INFO]: Change Logs Channel Id else Bot Could not be start")
+      sys.exit()
+    
+HNDLR = os.getenv("HNDLR", None)
+if not HNDLR:
+   HNDLR = "."
+OWNER_ID = int(os.environ.get("OWNER_ID", None))
+SUDO_USERS = os.getenv("SUDO_USERS", None)
+#Optional
+DATABASE_URL = os.getenv("DATABASE_URL", None)
