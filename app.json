@@ -6,8 +6,8 @@
         "telegram",
         "PYROGRAM",
         "telegram-bot",
-        "RiZoeLXSpam",
-        "SpamBots"
+        "SpamX",
+        "RiZoeLX"
       ],   
   "repository": "https://github.com/RiZoeLX/SpamX",
   "website": "https://github.com/RiZoeLX",
@@ -149,6 +149,14 @@
             "required": false  
         }
     },
+    "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
     "buildpacks": [
         {
           "url": "heroku/python"
