@@ -1,5 +1,5 @@
 import os, sys
-from resources.startup import *
+from resources import *
  
 os.system("clear")
 
