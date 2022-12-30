@@ -92,7 +92,7 @@ def SpamX_Setup():
     print(f'    {white}SpamX Version: v0.4 \n    {white}By RiZoeX')
 
     time.sleep(2)
-    api_id = input(f"{bcyan}Enter API_ID: ")
+    api_id = input(f"{ask}Enter API_ID: ")
     if api_id:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set API_ID {api_id}")
@@ -104,14 +104,14 @@ def SpamX_Setup():
     if ALIVE_PIC:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set ALIVE_PIC {ALIVE_PIC}")
-    ALIVE_MSG = input(f"\n{ask}Enter ALIVE_MSG or press enter: ").replace(" ","\ ")
+    ALIVE_MSG = input(f"\n{ask}Enter ALIVE_MSG or press enter: ").replace(" ", "\ ")
     if ALIVE_MSG:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set ALIVE_MSG {ALIVE_MSG}")
-    PING_MSG = input(f"\n{ask}Enter PING_MSG or press enter: ").replace(" ","\ ")
+    PING_MSG = input(f"\n{ask}Enter PING_MSG or press enter: ").replace(" ", "\ ")
     if PING_MSG:
         print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set PING_MSG {PING_MSG}").replace(" ","\ ")
+        os.system(f"dotenv set PING_MSG {PING_MSG}").replace(" ", "\ ")
     LOGS_CHANNEL = input(f"\n{ask}Enter Chat ID or Username of LOGS_CHANNE: ")
     if LOGS_CHANNEL:
         print(f"{bcyan}Got it! Fill next value")
