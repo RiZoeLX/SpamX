@@ -50,5 +50,9 @@ if not HNDLR:
    HNDLR = "."
 OWNER_ID = int(os.environ.get("OWNER_ID", None))
 SUDO_USERS = os.getenv("SUDO_USERS", None)
+
 #Optional
 DATABASE_URL = os.getenv("DATABASE_URL", None)
+if DATABASE_URL:
+   if 'postgres' in DATABASE_URL and 'postgresql' not in DATABASE_URL:
+      DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
