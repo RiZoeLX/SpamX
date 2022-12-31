@@ -64,6 +64,7 @@ ALIVE_PIC=
 ALIVE_MSG=
 PING_MSG=
 LOGS_CHANNEL=
+DATABASE_URL=
 CLIENT=
 CLIENT2=
 CLIENT3=
@@ -208,8 +209,14 @@ def SpamX_Setup():
     if CLIENT20:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set CLIENT20 {CLIENT20}")
+    database_url = input(f"\n{ask}Enter Postgres database url or press enter: ")
+    if database_url:
+        if 'postgresql' in database_url or 'postgres' in database_url:
+           print(f"{bcyan}Got it! Fill next value")
+           os.system(f"dotenv set DATABASE_URL {database_url}")
+        else:
+           print(f"{error}Need Postgres database url, fill DATABASE_URL manually")
     recheck()
-
 
 def recheck():
     Recheck = input(f"\n{ask}Filled ALL Vars Correctly?: y/n: ")
