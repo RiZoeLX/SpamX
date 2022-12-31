@@ -1,3 +1,0 @@
-icon: https://github.com/RiZoeLX/SpamX/blob/main/SpamX/RiZoeLX.png
-deploy:
-    - okteto deploy --build -f docker-compose.yml
