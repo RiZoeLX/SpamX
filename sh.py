@@ -11,7 +11,7 @@ if start in ['Y', 'y', 'Yes', 'YES', 'yes']:
     check = x.read()
     lines = check.splitlines()
     x.close()
-    if not len(lines) == 29:
+    if not len(lines) == 30:
         os.system("rm -rf .env")
         y = open(".env", "w")
         y.write(evn_vars)
