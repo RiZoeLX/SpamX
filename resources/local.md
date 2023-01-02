@@ -2,7 +2,7 @@
 
 ----
 
-<h3> Tutorial video </h3>
+<h3>Tutorial video</h3>
 
 > Click on below button to expand 
 
@@ -11,6 +11,38 @@
 <br>
 × <i> Check below icon/image </i>
 
-<p><a href="http://youtube.com/@RiZoeLX"><img src="https://telegra.ph//file/8498acddcfb9e25c8705c.jpg" width="150""/></a></p>
+<p><a href="http://youtube.com/@RiZoeLX"><img src="https://telegra.ph//file/022296de189ff726a4f1e.jpg" width="200""/></a></p>
 
 </details>
+
+<h3>Commands</h3>
+
+<b>1) Sudo update & upgrade</b>
+
+```python
+sudo apt upgrade && sudo apt update
+```
+
+<b>2) Install screen </b>
+
+```python
+sudo apt install screen
+```
+
+<b>3) clone repo and open dictionary </b>
+
+```python
+git clone https://github.com/RiZoeLX/SpamX && cd SpamX
+```
+
+<b>4) Install requirements </b>
+
+```python
+python3 -m pip install --upgrade pip && pip3 install -r requirements.txt
+```
+
+<b>5) Run sh.py to fill values and start SpamX </b>
+
+```python
+python3 sh.py
+```
