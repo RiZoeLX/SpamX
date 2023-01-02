@@ -89,9 +89,10 @@ HNDLR=
 """
 
 def SpamX_Setup():
+    os.system("pip3 install python-dotenv[cli]")
     clear()
     print(f'    {white}SpamX Version: v0.4 \n    {white}By RiZoeX')
-
+    
     time.sleep(2)
     api_id = input(f"{ask}Enter API_ID: ")
     if api_id:
