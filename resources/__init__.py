@@ -235,6 +235,7 @@ def get_start():
     clear(fast=True)
     question = input(f"{ask}Wanna start SpamX Now?: y/n: ")
     if question.lower() == "y":
+        os.system("pip3 install python-dotenv")
         os.system("python3 -m SpamX")
     elif question.lower() == "n":
         print(f"\n{info}Nevermind !! You Can Start It Later With by using; python3-m SpamX\n")
