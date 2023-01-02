@@ -79,10 +79,9 @@ async def rraid(SpamX: Client, e: Message):
           if int(user.id) in RUSERs:
              await e.reply_text("User already in Raid list!")
              return
-          RUSERs.append(user.id)                
-      mention = user.mention
-      await e.reply_text(f"Reply Raid Activated On User {mention}")
-            
+          RUSERs.append(user.id)
+      await e.reply_text(f"Reply Raid Activated On User {user.mention}")
+ 
       if LOGS_CHANNEL:
          try:
             await SpamX.send_message(LOGS_CHANNEL, f"Activated Reply Raid By User: {e.from_user.id} \n\n On User: {mention} \n Chat: {e.chat.id}")
@@ -108,8 +107,7 @@ async def draid(SpamX: Client, e: Message):
            await e.reply_text("User not in Raid list!")
            return
          RUSERs.remove(user.id)
-      mention = user.mention
-      await e.reply_text(f"Reply Raid Activated Successfully On User {mention}")
+      await e.reply_text(f"Reply Raid Activated Successfully On User {user.mention}")
       
       if LOGS_CHANNEL:
          try:
