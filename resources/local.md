@@ -15,6 +15,8 @@
 
 </details>
 
+<br>
+
 <h3>Commands</h3>
 
 <b>1) Sudo update & upgrade</b>
