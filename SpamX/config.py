@@ -54,5 +54,7 @@ SUDO_USERS = os.getenv("SUDO_USERS", None)
 #Optional
 DATABASE_URL = os.getenv("DATABASE_URL", None)
 if DATABASE_URL:
+   os.system("pip3 install sqlalchemy==1.3.20")
+   os.system("pip3 install psycopg2-binary") 
    if 'postgres' in DATABASE_URL and 'postgresql' not in DATABASE_URL:
       DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
