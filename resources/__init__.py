@@ -98,10 +98,18 @@ def SpamX_Setup():
     if api_id:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set API_ID {api_id}")
+    else:
+        print(f"{error}You have to fill this variable! all process restarting..")
+        time.sleep(2)
+        SpamX_Setup()
     api_hash = input(f"\n{ask}Enter API_HASH: ")
     if api_hash:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set API_HASH {api_hash}")
+    else:
+        print(f"{error}You have to fill this variable! all process restarting..")
+        time.sleep(2)
+        SpamX_Setup()
     ALIVE_PIC = input(f"\n{ask}Enter ALIVE_PIC (Telegraph link) or press enter!: ")
     if ALIVE_PIC:
         print(f"{bcyan}Got it! Fill next value")
@@ -114,7 +122,7 @@ def SpamX_Setup():
     if PING_MSG:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set PING_MSG {PING_MSG}").replace(" ", "\ ")
-    LOGS_CHANNEL = input(f"\n{ask}Enter Chat ID or Username of LOGS_CHANNE: ")
+    LOGS_CHANNEL = input(f"\n{ask}Enter Chat ID or Username of LOGS_CHANNEL: ")
     if LOGS_CHANNEL:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set LOGS_CHANNEL {LOGS_CHANNEL}")
@@ -122,6 +130,10 @@ def SpamX_Setup():
     if owner_id:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set OWNER_ID {owner_id}")
+    else:
+        print(f"{error}You have to fill this variable! all process restarting..")
+        time.sleep(2)
+        SpamX_Setup()
     sudo_users = input(f"\n{ask}Enter SUDO_USERS (space by space) or press enter: ").replace(" ", "\ ")
     if sudo_users:
         print(f"{bcyan}Got it! Fill next value")
@@ -134,6 +146,10 @@ def SpamX_Setup():
     if CLIENT:
         print(f"{bcyan}Got it! Fill next value")
         os.system(f"dotenv set CLIENT {CLIENT}")
+    else:
+        print(f"{error}You have to fill this variable! all process restarting..")
+        time.sleep(2)
+        SpamX_Setup()
     CLIENT2 = input(f"\n{ask}Enter session or bot token of CLIENT2 or press enter: ")
     if CLIENT2:
         print(f"{bcyan}Got it! Fill next value")
