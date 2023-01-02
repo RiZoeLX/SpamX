@@ -4,10 +4,10 @@ tgcrypto
 python-dotenv[cli]
 python-dotenv
 gitpython
-py-tgcalls
-sqlalchemy==1.3.20 
-psycopg2-binary
+py-tgcalls 
 psutil
 py-cpuinfo
 PhoenixScanner 
 telegraph
+sqlalchemy==1.3.20
+psycopg2-binary
