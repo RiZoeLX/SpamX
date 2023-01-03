@@ -1,4 +1,4 @@
-<h1> Local hosting guide </h1>
+<h1>Local hosting guide</h1>
 
 ----
 
@@ -40,7 +40,7 @@ git clone https://github.com/RiZoeLX/SpamX && cd SpamX
 <b>4) Install requirements </b>
 
 ```python
-python3 -m pip install --upgrade pip && pip3 install -r requirements.txt
+sudo apt install python3-pip && pip3 install -r requirements.txt
 ```
 
 <b>5) Run sh.py to fill values and start SpamX </b>
