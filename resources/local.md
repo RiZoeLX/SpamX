@@ -46,5 +46,5 @@ sudo apt install python3-pip && pip3 install -r requirements.txt
 <b>5) Run sh.py to fill values and start SpamX </b>
 
 ```python
-python3 sh.py
+screen -S SpamX && python3 sh.py
 ```
