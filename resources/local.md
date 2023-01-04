@@ -43,8 +43,14 @@ git clone https://github.com/RiZoeLX/SpamX && cd SpamX
 sudo apt install python3-pip && pip3 install -r requirements.txt
 ```
 
-<b>5) Run sh.py to fill values and start SpamX </b>
+<b>5) Open Screen </b>
 
 ```python
-screen -S SpamX && python3 sh.py
+screen -S SpamX 
+```
+
+<b>6) Run sh.py to fill values and start SpamX </b>
+
+```python
+python3 sh.py
 ```
