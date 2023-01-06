@@ -121,7 +121,7 @@ def SpamX_Setup():
     PING_MSG = input(f"\n{ask}Enter PING_MSG or press enter: ").replace(" ", "\ ")
     if PING_MSG:
         print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set PING_MSG {PING_MSG}").replace(" ", "\ ")
+        os.system(f"dotenv set PING_MSG {PING_MSG}")
     LOGS_CHANNEL = input(f"\n{ask}Enter Chat ID or Username of LOGS_CHANNEL: ")
     if LOGS_CHANNEL:
         print(f"{bcyan}Got it! Fill next value")
