@@ -2,21 +2,6 @@
 
 ----
 
-"""<h3>Tutorial video</h3>
-
-> Click on below button to expand 
-
-<details>
-<summary><b> YouTube </b></summary>
-<br>
-× <i> Check below icon/image </i>
-
-<p><a href="http://youtube.com/@RiZoeLX"><img src="https://telegra.ph//file/022296de189ff726a4f1e.jpg" width="200""/></a></p>
-
-</details>
-
-<br>"""
-
 <h3>Commands</h3>
 
 <b>1) pkg update & upgrade</b>
@@ -43,7 +28,13 @@ git clone https://github.com/RiZoeLX/SpamX && cd SpamX
 python3 -m pip install --upgrade pip && pip3 install -r requirements.txt
 ```
 
-<b>5) Run sh.py to fill values and start SpamX </b>
+<b>5) Run screen </b>
+
+```python
+screen -S SpamX
+```
+
+<b>6) Run sh.py to fill values and start SpamX </b>
 
 ```python
 python3 sh.py
