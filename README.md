@@ -10,7 +10,7 @@
 <h4> SpamX Is A Pyrogram Based Spam Bots For Telegram With Many Features </h4>
 
 ----
-<h4> Youtube Tutorials 📺 <h4>
+<h4> Youtube Tutorials 📺 </h4>
 - [![YouTube Video](https://img.shields.io/youtube/views/GW_ZNdRrFtg?label=Tutorial+•+Heroku+•&style=social)](https://youtu.be/GW_ZNdRrFtg)
 - [![YouTube Video](https://img.shields.io/youtube/views/6XIjTbumJYY?label=Tutorial+•+Mogenius+•&style=social)](https://youtu.be/6XIjTbumJYY)
 - [![YouTube Video](https://img.shields.io/youtube/views/sYgy4_8i7c8?label=Tutorial+•+Google+•Colab+•&style=social)](https://youtu.be/sYgy4_8i7c8)
