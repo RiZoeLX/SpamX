@@ -8,7 +8,6 @@
 <h3>Tutorial video</h3>
 
 <br>
-× <i> Check below icon/image </i>
+× <i> Check below icon/image </i> <br>
 
-<br>
 <p><a href="https://youtu.be/GW_ZNdRrFtg"><img src="https://telegra.ph//file/022296de189ff726a4f1e.jpg" width="200""/></a></p>
