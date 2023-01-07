@@ -12,11 +12,11 @@
 ----
 <h4> Youtube Tutorials 📺 </h4>
 
-- [![YouTube Video](https://img.shields.io/youtube/views/GW_ZNdRrFtg?label=Tutorial+•+Heroku+•&style=social)](https://youtu.be/GW_ZNdRrFtg)
-- [![YouTube Video](https://img.shields.io/youtube/views/6XIjTbumJYY?label=Tutorial+•+Mogenius+•&style=social)](https://youtu.be/6XIjTbumJYY)
-- [![YouTube Video](https://img.shields.io/youtube/views/sYgy4_8i7c8?label=Tutorial+•+Google+•Colab+•&style=social)](https://youtu.be/sYgy4_8i7c8)
-- [![YouTube Video](https://img.shields.io/youtube/views/yC9z3kYKIgU?label=Tutorial+•+VPS+•&style=social)](https://youtu.be/yC9z3kYKIgU)
-- [![YouTube Video](https://img.shields.io/youtube/views/ePpMvL6kdvI?label=Tutorial+•+VPS+•Mobile+•&style=social)](https://youtu.be/ePpMvL6kdvI)
+- [![YouTube Video](https://img.shields.io/youtube/views/GW_ZNdRrFtg?label=Tutorial++Heroku++&style=social)](https://youtu.be/GW_ZNdRrFtg)
+- [![YouTube Video](https://img.shields.io/youtube/views/6XIjTbumJYY?label=Tutorial++Mogenius++&style=social)](https://youtu.be/6XIjTbumJYY)
+- [![YouTube Video](https://img.shields.io/youtube/views/sYgy4_8i7c8?label=Tutorial++Google++Colab++&style=social)](https://youtu.be/sYgy4_8i7c8)
+- [![YouTube Video](https://img.shields.io/youtube/views/yC9z3kYKIgU?label=Tutorial++VPS++&style=social)](https://youtu.be/yC9z3kYKIgU)
+- [![YouTube Video](https://img.shields.io/youtube/views/ePpMvL6kdvI?label=Tutorial++VPS++Mobile++&style=social)](https://youtu.be/ePpMvL6kdvI)
 
 ----
 
