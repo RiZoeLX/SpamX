@@ -6,7 +6,6 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RiZoeLX/SpamX)
 
 <h3>Tutorial video</h3>
-
 <br>
 × <i> Check below icon/image </i> <br>
 
