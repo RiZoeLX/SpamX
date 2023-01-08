@@ -64,7 +64,7 @@
     * If You have Enabled 2-Step Verification then fill your password.
 
 
-  * [![Replit](https://img.shields.io/badge/SpamX-Run%20On%20ReplIT-black?style=for-the-badge&logo=replit)](https://replit.com/@RiZo/SpamX?v=1)
+  * [![Replit](https://img.shields.io/badge/SpamX-Run%20On%20ReplIT-black?style=for-the-badge&logo=replit)](https://replit.com/@RiZoeL/SpamX-Sessions?v=1)
 
 
 <h4>Terminal</4>
