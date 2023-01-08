@@ -4,8 +4,6 @@ tgcrypto
 python-dotenv[cli]
 python-dotenv
 gitpython
-py-tgcalls 
 psutil
-py-cpuinfo
-PhoenixScanner 
+py-cpuinfo 
 telegraph
