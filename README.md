@@ -22,6 +22,8 @@
    - [![PyPI - pyrogram](https://img.shields.io/badge/pypi-pyrogram-informational)](https://pypi.org/project/pyrogram)  
    - [![PyPI - pyRiZoeLX](https://img.shields.io/badge/pypi-pyRiZoeLX-informational)](https://pypi.org/project/pyRiZoeLX) 
 
+<b> Give a star ⭐</b>
+
 ----
 <h4>Youtube Tutorials 📺</h4>
 
@@ -86,7 +88,7 @@ pkg install python wget -y && pip install pyrogram && wget https://raw.githubuse
 [![License](https://www.gnu.org/graphics/gplv3-or-later.png)](LICENSE)   
 SpamX is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/gplv3-or-later.pngl) v3 or later.
 
-<h3 align="center">Credits</h3>
+<h3>Credits</h3>
 
  - [![RiZoeL](https://img.shields.io/badge/Dev-MrRizoel-red)](https://github.com/MrRizoel)
  - [![Pyrogram](https://img.shields.io/badge/Lib-pyrogram-red)](https://github.com/pyrogram/pyrogram)
