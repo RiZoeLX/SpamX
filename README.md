@@ -1,9 +1,9 @@
 <p align="center">
   <img src="resources/RiZoeLX.png" alt="RiZoeLXSpam Logo">
 </p>
-<h1 align="center">
+<h6 align="center">
   <b>• SᴘᴀᴍX •</b>
-</h1>
+</h6>
 
 ----
 
