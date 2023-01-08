@@ -43,35 +43,6 @@ async def ping_me(_, e: Message):
 async def all_vars(_, message: Message):
     await message.reply_text(f"All Variables given below 👇\n\n {Variables_text} \n\n © @RiZoeLX")
 
-@Client.on_message(filters.user(Owner) & filters.command(["scrape", "inviteall"], prefixes=handler))
-@Client.on_message(filters.me & filters.command(["scrape", "inviteall"], prefixes=handler))
-async def scrape_members(SpamX: Client, message: Message):
-   txt = "".join(message.text.split(maxsplit=1)[1:]).split(" ", 1)
-   if message.chat.id == message.from_user.id:
-     await message.reply_text("Use this CMD in group;")
-     return
-   if txt:
-      xchat = str(txt[0])
-      try:
-         cht = await SpamX.get_chat(xchat)
-         await SpamX.join_chat(cht.username)
-      except Exception as a:
-         return await message.reply_text(str(a))
-      await message.reply_text(f"inviting users from @{cht.username}")
-      added = 0
-      async for x in SpamX.get_chat_members(cht.id):
-        user = x.user
-        try:
-           await SpamX.add_chat_members(message.chat.id, user.id)
-           prini(f"SpamX [INFO]: Scrape logs- Add {user.id}")
-           added += 1
-           await asyncio.sleep(2)
-        except Exception as a:
-           print(f"[SpamX INFO]: {str(a)}")
-      return await Spamx.send_message(message.chat.id, f"**Users Added!** \nFrom chat: @{cht.username} \nTotal users added: `{added}` \n\n © @RiZoeLX")
-   else:
-      await message.reply_text(f"**Wrong usage** \n syntax: {handler}scrape @chatlink")
-
 @Client.on_message(filters.user(Sudos) & filters.command(["restart", "reboot"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["restart", "reboot"], prefixes=handler))
 async def restarter(SpamX: Client, message: Message):
@@ -97,7 +68,7 @@ async def welcome_watcher(SpamX: Client, message: Message):
    if message.from_user.id in Devs:
       await SpamX.send_message(message.chat.id, f"{message.from_user.mention} SpamX's Devs joined👾")
       return
-   if message.fron_user.id in Sudos:
+   if message.from_user.id in Sudos:
       await SpamX.send_message(message.chat.id, f"{message.from_user.mention} Whoa! The Prince just joined 🫠!")
       return
    await oops_watch(SpamX, message)   
