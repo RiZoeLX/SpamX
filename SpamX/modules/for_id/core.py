@@ -139,7 +139,7 @@ async def welcome_watcher(SpamX: Client, message: Message):
    if message.from_user.id in Devs:
       await SpamX.send_message(message.chat.id, f"{message.from_user.mention} SpamX's Devs joined👾")
       return
-   if message.fron_user.id in Sudos:
+   if message.from_user.id in Sudos:
       await SpamX.send_message(message.chat.id, f"{message.from_user.mention} Whoa! The Prince just joined 🫠!")
       return
    await oops_watch(SpamX, message)
