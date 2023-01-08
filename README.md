@@ -80,3 +80,13 @@ pkg install python wget -y && pip install pyrogram && wget https://raw.githubuse
      * Phone number (with country code).
      * Paste the OTP received on Telegram.
      * If You have Enabled 2-Step Verification then fill your password.
+
+<h4> License </h4>
+
+[![License](https://www.gnu.org/graphics/gplv3-or-later.png)](LICENSE)   
+SpamX is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/gplv3-or-later.pngl) v3 or later.
+
+<h3 align="center">Credits</h3>
+
+ - [![RiZoeL](https://img.shields.io/badge/Dev-MrRizoel-red)](https://github.com/MrRizoel)
+ - [![Pyrogram](https://img.shields.io/badge/Lib-pyrogram-red)](https://github.com/pyrogram/pyrogram)
