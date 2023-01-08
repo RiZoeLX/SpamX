@@ -19,9 +19,8 @@
 [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-white?&style=social&logo=telegram)](https://t.me/RiZoelX)
 
  - Requirements
-   - [![PyPI - Version](https://img.shields.io/pypi/v/pyrogram?style=round)](https://pypi.org/project/pyrogram)  
-   - [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX) 
-   - [![PyPI - Version](https://img.shields.io/pypi/v/sqlalchemy?style=round)](https://pypi.org/project/sqlalchemy)  `If DATABASE_URL`
+   - [![PyPI - pyrogram](https://img.shields.io/badge/pypi-pyrogram-informational)](https://pypi.org/project/pyrogram)  
+   - [![PyPI - pyRiZoeLX](https://img.shields.io/badge/pypi-pyRiZoeLX-informational)](https://pypi.org/project/pyRiZoeLX) 
 
 ----
 <h4>Youtube Tutorials 📺</h4>
