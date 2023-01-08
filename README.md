@@ -9,6 +9,12 @@
 
 <b> SpamX Is A Pyrogram Based Spam Bots For Telegram With Many Features </b>
 
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=RiZoeLX&repo=SpamX&theme=dark)
+![Python](https://img.shields.io/badge/Python-v3.10-white?style=social&logo=python)
+![GitHub language count](https://img.shields.io/github/languages/count/RiZoeLX/SpamX?&style=social&logo=hyper)
+[![Telegram Group](https://img.shields.io/badge/Telegram-Group-white?&style=social&logo=telegram)](https://t.me/DNHxHELL)
+[![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-white?&style=social&logo=telegram)](https://t.me/RiZoelX)
+
 ----
 <h4>Youtube Tutorials 📺</h4>
 
