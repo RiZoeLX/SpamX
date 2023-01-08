@@ -10,12 +10,18 @@
 <b> SpamX Is A Pyrogram Based Spam Bots For Telegram With Many Features </b>
 
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=RiZoeLX&repo=SpamX&theme=lite)
+
 ![Repo Size](https://img.shields.io/github/repo-size/RiZoeLX/SpamX?&style=social&logo=github)
-![Branch](https://img.shields.io/badge/Branch-Master-white?&style=social&logo=github)
+![Branch](https://img.shields.io/badge/Branch-main-white?&style=social&logo=github)
 ![Python](https://img.shields.io/badge/Python-v3.10-white?style=social&logo=python)
 ![GitHub language count](https://img.shields.io/github/languages/count/RiZoeLX/SpamX?&style=social&logo=hyper)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-white?&style=social&logo=telegram)](https://t.me/DNHxHELL)
 [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-white?&style=social&logo=telegram)](https://t.me/RiZoelX)
+
+ - Requirements
+   - [![PyPI - Version](https://img.shields.io/pypi/v/pyrogram?style=round)](https://pypi.org/project/pyrogram)  
+   - [![PyPI - Version](https://img.shields.io/pypi/v/pyRiZoeLX?style=round)](https://pypi.org/project/pyRiZoeLX) 
+   - [![PyPI - Version](https://img.shields.io/pypi/v/sqlalchemy?style=round)](https://pypi.org/project/sqlalchemy)  `If DATABASE_URL`
 
 ----
 <h4>Youtube Tutorials 📺</h4>
