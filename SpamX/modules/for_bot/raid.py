@@ -121,15 +121,14 @@ async def draid(SpamX: Client, e: Message):
 @Client.on_message(filters.all)
 async def watcher(_, msg: Message):
     global RUSERs
-    user = msg.from_user
     if int(msg.chat.id) in res_grps:
        return
     if DATABASE_URL:
-       check = raid_db.check(user.id)
+       check = raid_db.check(msg.from_user.id)
        if check:
          await msg.reply_text(choice(raids.replyraids))
     else:
-       if int(user.id) in RUSERs:
+       if int(msg.from_user.id) in RUSERs:
          await msg.reply_text(choice(raids.replyraids))       
 
 @Client.on_message(filters.user(Sudos) & filters.command(["rlist", "raidlist"], prefixes=handler))
