@@ -36,19 +36,34 @@
 
 <h4>Repl</h4>
 
+  * Open Repl Link.
+  * Click on Green Play Button.
+  * Wait for requirements to finish.
+  * next Steps:
+    * Fill API_ID, API_HASH (It'll use same api id and hash to generate sessions, so use fresh).
+    * Enter the no. of accounts on you want to generate string sessions.
+    * Enter Username of user to whom you want to forward all seasons or press enter.
+    * Phone number (with country code).
+    * Paste the OTP received on Telegram.
+    * If You have Enabled 2-Step Verification then fill your password.
+
+
+  * [![Replit](https://img.shields.io/badge/SpamX-Run%20On%20ReplIT-black?style=for-the-badge&logo=replit)](https://replit.com/@RiZo/SpamX?v=1)
+
+
 <h4>Terminal</4>
 
-   * Open terminal
+  * Open terminal
 
    ```python
 pkg install python wget -y && pip install pyrogram && wget https://raw.githubusercontent.com/RiZoeLX/SpamX/main/multisess.py && python3 multisess.py
    ```
-   * Paste ☝️ This code
+  * Paste ☝️ This code
 
-   * next Steps:
-       * Fill API_ID, API_HASH (It'll use same api id and hash to generate sessions, so use fresh).
-       * Enter the no. of accounts on you want to generate string sessions.
-       * Enter Username of user to whom you want to forward all seasons or press enter.
-       * Phone number (with country code).
-       * Paste the OTP received on Telegram.
-       * If You have Enabled 2-Step Verification then fill your password.
+  * next Steps:
+     * Fill API_ID, API_HASH (It'll use same api id and hash to generate sessions, so use fresh).
+     * Enter the no. of accounts on you want to generate string sessions.
+     * Enter Username of user to whom you want to forward all seasons or press enter.
+     * Phone number (with country code).
+     * Paste the OTP received on Telegram.
+     * If You have Enabled 2-Step Verification then fill your password.
