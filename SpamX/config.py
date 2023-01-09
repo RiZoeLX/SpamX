@@ -11,7 +11,13 @@ if os.path.exists(".env"):
 
 # -------------CONFIGS--------------------
 API_ID = int(os.getenv("API_ID", ""))
+if not API_ID:
+   print("SpamX [INFO]: You didn't fill API_ID var!")
+   sys.exit()
 API_HASH = os.getenv("API_HASH", "")
+if not API_HASH:
+   print("SpamX [INFO]: You didn't fill API_HASH var!")
+   sys.exit()
 ALIVE_PIC = os.getenv("ALIVE_PIC", "")
 ALIVE_MSG = os.getenv("ALIVE_MSG", "")
 PING_MSG = os.getenv("PING_MSG", "")
@@ -49,6 +55,9 @@ HNDLR = os.getenv("HNDLR", None)
 if not HNDLR:
    HNDLR = "."
 OWNER_ID = int(os.environ.get("OWNER_ID", None))
+if not OWNER_ID:
+   print("SpamX [INFO]: You didn't fill OWNER_ID var!")
+   sys.exit()
 SUDO_USERS = os.getenv("SUDO_USERS", None)
 
 #Optional
