@@ -10,7 +10,7 @@ help_text = f"""
 
 Functions/Modules available ⬇️
 
-=> `spam` , `raid` , `owner` , `direct_message` , `admin` , `core` , `sudos` , `global` , `profile` , `joinleave` , `info`
+=> `spam` , `raid` , `owner` , `directmessage` , `admin` , `core` , `sudos` , `global` , `profile` , `joinleave` , `info`
 
 Type `{hndlr}help` (Module name) | Bot'll give info/usage of
 that module.
@@ -151,7 +151,7 @@ def check_string(text):
       return "raid"
    if re.search("owner".lower(), text.lower()):
       return "owner"
-   if re.search("direct|dm|direct_message".lower(), text.lower()):
+   if re.search("directmessage|direct_message".lower(), text.lower()):
       return "dm"
    if re.search("admin".lower(), text.lower()):
       return "admin"
