@@ -4,7 +4,7 @@ from resources import *
 os.system("clear")
 
 # ------ main ------ #
-start = input(f"{ask}What to fill vars ? if yes type Y/yes else press enter: ")
+start = input(f"{ask}Want to fill vars ? if yes type Y/yes else press enter: ")
 if start in ['Y', 'y', 'Yes', 'YES', 'yes']:
   if os.path.exists(".env"):
     x = open(".env", "r")
