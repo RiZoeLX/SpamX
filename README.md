@@ -91,5 +91,5 @@ SpamX is licensed under [GNU Affero General Public License](https://www.gnu.org/
 
 <h3>Credits</h3>
 
- - [![RiZoeL](https://img.shields.io/badge/Dev-MrRizoel-red)](https://github.com/MrRizoel)
- - [![Pyrogram](https://img.shields.io/badge/Lib-pyrogram-red)](https://github.com/pyrogram/pyrogram)
+  - <b> [RiZoeL](https://github.com/MrRizoel) : Dev/creator of SpamX </b> 
+  - <b> [Pyrogram](https://github.com/pyrogram/pyrogram) : Library used in SpamX
