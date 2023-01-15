@@ -32,7 +32,7 @@ if DATABASE_URL:
   def add_user(user_id):
      fuk = SESSION.query(raiders).get(user_id)
      if not fuk:
-        user = Devs(user_id)
+        user = raiders(user_id)
         SESSION.add(user)
         SESSION.commit()
 
