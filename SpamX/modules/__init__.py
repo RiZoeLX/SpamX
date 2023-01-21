@@ -43,11 +43,8 @@ LOGS_CHANNEL = LOGS_CHANNEL
 if DATABASE_URL:
    from SpamX.database import users_db
    Sudos = []
-   Sudos.append(Owner)
-   all = users_db.get_all_sudos()
-   for user_id in all:
-       Sudos.append(user_id)
-
+   All = users_db.get_all_sudos()
+   for x in All:
+     Sudos.append(x.user_id)
 else:
-  Sudos = sudoser
-  Sudos.append(Owner)
+   Sudos = sudoser
