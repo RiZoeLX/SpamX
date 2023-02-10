@@ -79,7 +79,7 @@ async def clone_user(SpamX: Client, message: Message):
     if _bio.bio:
        user_bio = _bio.bio
     else:
-       user.bio = None
+       user_bio = None
     pic = await SpamX.download_media(user.photo.big_file_id)
     try:
        await SpamX.set_profile_photo(photo=pic)
