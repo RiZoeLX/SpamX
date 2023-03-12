@@ -27,3 +27,5 @@ except ValueError:
 sudoser = []
 if SUDO_USERS:
   sudoser = make_list(OWNER_ID, SUDO_USERS)
+else:
+  sudoser.append(OWNER_ID)
