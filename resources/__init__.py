@@ -229,7 +229,7 @@ def SpamX_Setup():
     database_url = input(f"\n{ask}Enter Postgres database url or press enter: ")
     if database_url:
         if 'postgresql' in database_url or 'postgres' in database_url:
-           print(f"{bcyan}Got it! Fill next value")
+           print(f"{bcyan}Got it!")
            os.system(f"dotenv set DATABASE_URL {database_url}")
         else:
            print(f"{error}Need Postgres database url, fill DATABASE_URL manually")
