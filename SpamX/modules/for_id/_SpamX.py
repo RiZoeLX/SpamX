@@ -142,7 +142,7 @@ def get_text(message: Message) -> [None, str]:
 async def _telegraph(SpamX: Client, message: Message):
     hm = await message.reply_text("`Processing . . .`")
     if not message.reply_to_message:
-        await tex.edit("**Reply to an Image or text.**")
+        await hm.edit("**Reply to an Image or text.**")
         return
     if message.reply_to_message.media:
         doc = await message.reply_to_message.download()
