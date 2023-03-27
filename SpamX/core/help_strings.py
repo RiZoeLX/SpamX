@@ -98,7 +98,7 @@ Available commands and there Usage ⬇️
 •) {hndlr}ungban [user] (DATABASE_URL required in this CMD)
 •) {hndlr}gbanlist
 •) {hndlr}gpromote [user]
-•) {hndlr}Gdemote [user]
+•) {hndlr}gdemote [user]
 """
 
 profile_text = f"""
