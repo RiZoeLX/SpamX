@@ -64,7 +64,7 @@ async def setbio(SpamX: Client, e: Message):
       try:
          await SpamX.update_profile(first_name=nam, last_name=nam2, bio=xd)
          await e.reply_text(f"**Profile Bio Changed Successfully !** \n\n **New Bio**: {xd}")
-       except Exception as ex:
+      except Exception as ex:
          await e.reply_text(f"**Error !!** \n\n {ex}")
          print(ex)
       
