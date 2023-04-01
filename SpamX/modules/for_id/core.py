@@ -190,7 +190,7 @@ async def Update_SpamX(SpamX: Client, message: Message):
          return
       await message.reply_text(f"```{out}```")
    except Exception as e:
-      await m.reply_text(str(e))
+      await message.reply_text(str(e))
       return
    await message.reply_text("**Updated with main branch, restarting now.**")
    args = [sys.executable, "-m", "SpamX"]
