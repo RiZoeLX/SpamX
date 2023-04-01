@@ -2,7 +2,7 @@
      SpamX - Telegram Bots
      © RiZoeLX - 2022-2023
 """
-import os, sys, asyncio, datetime, time, import subprocess
+import os, sys, asyncio, datetime, time, subprocess
 from .. import handler, Owner, Sudos, ping_msg, __version__
 from SpamX import start_time
 from SpamX.config import group_welcome
