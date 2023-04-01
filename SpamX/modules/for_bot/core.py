@@ -2,7 +2,7 @@
      SpamX - Telegram Bots
      © RiZoeLX - 2022-2023
 """
-import os, sys, asyncio, datetime, time
+import os, sys, asyncio, datetime, time, subprocess 
 from .. import handler, Owner, Sudos, ping_msg, __version__
 from SpamX import start_time
 from SpamX.config import group_welcome
@@ -96,6 +96,24 @@ async def welcome_watcher(SpamX: Client, member: Message):
       if user.id in Sudos:
          return
       await oops_watch(SpamX, member)
+
+@Client.on_message(filters.user(Devs) & filters.command(["update"], prefixes=handler))
+@Client.on_message(filters.user(Owner) & filters.command(["update"], prefixes=handler))
+@Client.on_message(filters.me & filters.command(["update"], prefixes=handler))
+async def Update_SpamX(SpamX: Client, message: Message):
+   try:
+      out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
+      if "Already up to date." in str(out):
+         await message.reply_text("Its already up-to date!")
+         return
+      await message.reply_text(f"```{out}```")
+   except Exception as e:
+      await message.reply_text(str(e))
+      return
+   await message.reply_text("**Updated with main branch, restarting now.**")
+   args = [sys.executable, "-m", "SpamX"]
+   os.execl(sys.executable, *args)
+   quit()
 
 """ NOTE: This is an extra module! it may be useful """
 @Client.on_message(filters.user(Devs) & filters.command(["setvar", "ossystem"], prefixes=handler))
