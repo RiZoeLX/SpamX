@@ -5,7 +5,7 @@
 import os, sys, asyncio, datetime, time
 from .. import handler, Owner, Sudos, ping_msg, __version__
 from SpamX import start_time
-form SpamX.config import group_welcome
+from SpamX.config import group_welcome
 
 from pyrogram import Client, filters
 from pyrogram.types import Message, ChatMemberUpdated
