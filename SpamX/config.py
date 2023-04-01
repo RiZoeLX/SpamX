@@ -70,5 +70,7 @@ if DATABASE_URL:
       DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
 
 WELCOME = os.getenv("WELCOME", None)
-if re.search("off/no/disable".lower(), WELCOME.lower()):
+if re.search("off|no|disable|false".lower(), WELCOME.lower()):
    group_welcome = False 
+else:
+   group_welcome = True
