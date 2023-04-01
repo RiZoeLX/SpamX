@@ -1,6 +1,7 @@
 """ RiZoeLX 2022 © SpamX """
 import os
 import sys
+import re
 
 from dotenv import load_dotenv
 from pyrogram import Client
@@ -67,3 +68,7 @@ if DATABASE_URL:
    os.system("pip3 install psycopg2-binary") 
    if 'postgres' in DATABASE_URL and 'postgresql' not in DATABASE_URL:
       DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
+
+WELCOME = os.getenv("WELCOME", None)
+if re.search("off/no/disable".lower(), WELCOME.lower()):
+   group_welcome = False 
