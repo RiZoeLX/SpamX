@@ -163,11 +163,8 @@ async def Red7_report(SpamX: Client, message: Message):
          await SpamX.send_message("Red7Systembot", Report_message)
          await asyncio.sleep(2) 
          async for response in SpamX.get_chat_history("Red7Systembot", 1):
-             await SpamX.forward_messages(chat.id, "Red7Systembot", response.id)
-             try:
-                await message.reply_text(".")
-             except:
-                await SpamX.send_message(chat.id, f"{user.mention}!")
+            hm = await SpamX.forward_messages(chat.id, "Red7Systembot", response.id)
+            await hm.reply_text(f"{user.mention}! Check")
       except Exception as eror:
          await message.reply_text(str(eror))
 
