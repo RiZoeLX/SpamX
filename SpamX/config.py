@@ -75,3 +75,5 @@ if WELCOME:
       group_welcome = False 
    else:
       group_welcome = True
+else:
+   group_welcome = True
