@@ -1,11 +1,12 @@
 """ RiZoeLX 2022 © SpamX """
 
-import os, sys, io
+import os, sys, io, random
 from io import StringIO
 from .. import Owner, Sudos, handler
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
+from SpamX import AUTO_REACT, EMOJI_LIST
 from SpamX.core import user_errors 
 from SpamX.core.help_strings import *
 from RiZoeLX.functions import user_only, delete_reply
@@ -175,3 +176,8 @@ async def help_(_, message: Message):
        return 
    help_message = await help_return(string)
    await message.reply_text(str(help_message))
+
+@Client.on_message(filters.chat(GROUP_LIST) & filters.all)
+async def message_forward(_, message: Message):
+   emoj = random.choice(EMOJI_LIST)
+   await message.react(emoji=emoj, big=True)
