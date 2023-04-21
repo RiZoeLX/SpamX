@@ -45,6 +45,7 @@ CLIENT17 = os.getenv("CLIENT17", None)
 CLIENT18 = os.getenv("CLIENT18", None)
 CLIENT19 = os.getenv("CLIENT19", None)
 CLIENT20 = os.getenv("CLIENT20", None)
+auto_re = os.getenv("AUTO_REACT_CHATS", None)
 LOGS_CHANNEL = os.getenv("LOGS_CHANNEL", None)
 if LOGS_CHANNEL:
    if check_logchannel(LOGS_CHANNEL):
@@ -77,3 +78,4 @@ if WELCOME:
       group_welcome = True
 else:
    group_welcome = True
+
