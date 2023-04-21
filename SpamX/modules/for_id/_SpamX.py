@@ -178,6 +178,6 @@ async def help_(_, message: Message):
    await message.reply_text(str(help_message))
 
 @Client.on_message(filters.chat(GROUP_LIST) & filters.all)
-async def message_forward(_, message: Message):
+async def auto_react(_, message: Message):
    emoj = random.choice(EMOJI_LIST)
    await message.react(emoji=emoj, big=True)
