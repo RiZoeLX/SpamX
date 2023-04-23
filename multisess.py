@@ -1,7 +1,7 @@
 # SpamX Multiple String Generator 
 
 from pyrogram import Client
-import tgcrypto
+#import tgcrypto
 
 ID = int(input(" \n Send Api Id To Generate String Sessions: "))
 HASH = str(input(" \n Send Api Hash To Generate String Sessions: "))
