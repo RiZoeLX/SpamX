@@ -52,7 +52,7 @@ async def uraid(SpamX: Client, e: Message):
       mention = user.mention
       try:
          while unlimited == True:
-           raid = choice(raids)
+           raid = choice(raids.raid)
            raid_msg = f"{mention} {reply}"
            await SpamX.send_message(e.chat.id, raid_msg)
       except Exception as f:
