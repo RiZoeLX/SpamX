@@ -130,7 +130,7 @@ async def stats(SpamX: Client, message: Message):
     await delete_reply(message, tx, stats) 
 
 @Client.on_chat_member_updated(filters.group, group=69)
-async def welcome_watcher(SpamX: Client, member: Message):
+async def welcome_watcher(SpamX: Client, member: ChatMemberUpdated):
    if (
         member.new_chat_member
         and member.new_chat_member.status not in {CMS.BANNED, CMS.LEFT, CMS.RESTRICTED}
