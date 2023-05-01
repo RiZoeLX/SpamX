@@ -8,7 +8,7 @@ from SpamX import start_time
 from SpamX.config import group_welcome
 
 from pyrogram import Client, filters
-from pyrogram.types import Message
+from pyrogram.types import Message, ChatMemberUpdated
 from pyrogram.enums import ChatType
 
 from RiZoeLX.data import Variables, Variables_text
@@ -60,7 +60,7 @@ async def restarter(SpamX: Client, message: Message):
    
 
 @Client.on_chat_member_updated(filters.group, group=69)
-async def welcome_watcher(SpamX: Client, member: Message):
+async def welcome_watcher(SpamX: Client, member: ChatMemberUpdated):
    if (
         member.new_chat_member
         and member.new_chat_member.status not in {CMS.BANNED, CMS.LEFT, CMS.RESTRICTED}
