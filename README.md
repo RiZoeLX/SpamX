@@ -68,6 +68,7 @@
 
 
 <h4>Terminal</4>
+<br>
 
   * Open terminal
 
