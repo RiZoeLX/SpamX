@@ -1,4 +1,5 @@
 pyrogram
+pyroaddon
 tgcrypto
 python-dotenv[cli]
 python-dotenv
