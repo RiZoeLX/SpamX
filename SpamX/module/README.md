@@ -1,8 +1,7 @@
-<h1> ADd your Own Plugin <h1>
+<h1> Add your Own Plugin <h1>
 
 ```python
-from ., import TheSpamX
-
+from . import TheSpamX
 from pyrogram import Client, filters
 
 @Client.on_message(
