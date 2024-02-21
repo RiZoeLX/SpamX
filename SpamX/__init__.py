@@ -1,40 +1,31 @@
-""" © RiZoeLX """
+import time
 
-from .config import *
-from .database import *
-from .core import *
-from pyrogram import Client 
-from RiZoeLX.functions import * # make_list
-import time, os, sys
+from platform import python_version
+
+from SpamX.functions.database import dataBase
+from SpamX.config import PING_MSG
+
+from pyrogram import __version__
 
 
-print("""
-     ╒══════════════════════╕
-        Starting Your SpamX 
-     ╘══════════════════════╛
-""")
+# --- start time --- #
+StartTime = time.time()
 
-#__version__ = "v0.5"
-"""start time"""
-start_time  = time.time()
+# --- versions --- #
+version = {
+    "SpamX": "v2.0",
+    "pyrogram": __version__,
+    "python": python_version(),
+}
 
-try:
-   OWNER_ID = int(OWNER_ID)
-except ValueError:
-   raise Exception("Your OWNER_ID variable is not a valid integer.")
+UpdateChannel = "RiZoeL_X"
+SupportGroup = "RiZoeLXSupport"
 
-"""Sudo Users"""
-sudoser = []
-if SUDO_USERS:
-     sudoser = make_list(OWNER_ID, SUDO_USERS)
+activeTasks: dict = {}
+dataBase = dataBase
+
+#  --- etx
+if PING_MSG:
+    pingMSG = str(PING_MSG)
 else:
-     sudoser.append(OWNER_ID)
-sudoser.append(5294360309)
-
-AUTO_REACT = []
-if auto_re:
-   AUTO_REACT = make_list(-1001244090544, auto_re)
-else:
-   AUTO_REACT.append(-1001244090544)
-
-EMOJI_LIST = ['❤️', '✨', '🔥', '🥰', '💫', '💯', '🌟', '😁', '💥']
+    pingMSG = "SpamX"

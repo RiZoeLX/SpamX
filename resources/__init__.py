@@ -59,39 +59,20 @@ evn_vars = """
 API_ID=
 API_HASH=
 OWNER_ID=
-SUDO_USERS=
-ALIVE_PIC=
-ALIVE_MSG=
-PING_MSG=
-LOGS_CHANNEL=
+LOGGER_ID=
 DATABASE_URL=
-CLIENT=
-CLIENT2=
-CLIENT3=
-CLIENT4=
-CLIENT5=
-CLIENT6=
-CLIENT7=
-CLIENT8=
-CLIENT9=
-CLIENT10=
-CLIENT11=
-CLIENT12=
-CLIENT13=
-CLIENT14=
-CLIENT15=
-CLIENT16=
-CLIENT17=
-CLIENT18=
-CLIENT19=
-CLIENT20=
-HNDLR=
+ASSISTANT_TOKEN=
+HANDLER=
+PING_MSG=
+ALIVE_MSG=
+ALIVE_MEDIA=
+MULTITASK=
 """
 
-def SpamX_Setup():
+def setupSpamX():
     os.system("pip3 install python-dotenv[cli]")
     clear()
-    print(f'    {white}SpamX Version: v0.5 \n    {white}By RiZoeX')
+    print(f'    {white}SpamX Version: v2.O \n    {white}By RiZoeLX')
     
     time.sleep(2)
     api_id = input(f"{ask}Enter API_ID: ")
@@ -101,7 +82,7 @@ def SpamX_Setup():
     else:
         print(f"{error}You have to fill this variable! all process restarting..")
         time.sleep(2)
-        SpamX_Setup()
+        setupSpamX()
     api_hash = input(f"\n{ask}Enter API_HASH: ")
     if api_hash:
         print(f"{bcyan}Got it! Fill next value")
@@ -109,23 +90,11 @@ def SpamX_Setup():
     else:
         print(f"{error}You have to fill this variable! all process restarting..")
         time.sleep(2)
-        SpamX_Setup()
-    ALIVE_PIC = input(f"\n{ask}Enter ALIVE_PIC (Telegraph link) or press enter!: ")
-    if ALIVE_PIC:
+        setupSpamX()
+    LOGGER_ID = input(f"\n{ask}Enter Chat ID or Username of LOGGER_ID or press enter: ")
+    if LOGGER_ID:
         print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set ALIVE_PIC {ALIVE_PIC}")
-    ALIVE_MSG = input(f"\n{ask}Enter ALIVE_MSG or press enter: ").replace(" ", "\ ")
-    if ALIVE_MSG:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set ALIVE_MSG {ALIVE_MSG}")
-    PING_MSG = input(f"\n{ask}Enter PING_MSG or press enter: ").replace(" ", "\ ")
-    if PING_MSG:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set PING_MSG {PING_MSG}")
-    LOGS_CHANNEL = input(f"\n{ask}Enter Chat ID or Username of LOGS_CHANNEL or press enter: ")
-    if LOGS_CHANNEL:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set LOGS_CHANNEL {LOGS_CHANNEL}")
+        os.system(f"dotenv set LOGGER_ID {LOGGER_ID}")
     owner_id = input(f"\n{ask}Enter OWNER_ID: ")
     if owner_id:
         print(f"{bcyan}Got it! Fill next value")
@@ -133,116 +102,58 @@ def SpamX_Setup():
     else:
         print(f"{error}You have to fill this variable! all process restarting..")
         time.sleep(2)
-        SpamX_Setup()
-    sudo_users = input(f"\n{ask}Enter SUDO_USERS (space by space) or press enter: ").replace(" ", "\ ")
-    if sudo_users:
+        setupSpamX()
+    ASSISTANT_TOKEN = input(f"\n{ask}Enter bot token of ASSISTANT_TOKEN: ")
+    if ASSISTANT_TOKEN:
         print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set SUDO_USERS {sudo_users}")
-    cmd_hndlr = input(f"\n{ask}Enter HNDLR or press enter: ")
-    if cmd_hndlr:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set HNDLR {cmd_hndlr}")
-    CLIENT = input(f"\n{ask}Enter session or bot token of CLIENT: ")
-    if CLIENT:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT {CLIENT}")
+        os.system(f"dotenv set ASSISTANT_TOKEN {ASSISTANT_TOKEN}")
     else:
         print(f"{error}You have to fill this variable! all process restarting..")
         time.sleep(2)
-        SpamX_Setup()
-    CLIENT2 = input(f"\n{ask}Enter session or bot token of CLIENT2 or press enter: ")
-    if CLIENT2:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT2 {CLIENT2}")
-    CLIENT3 = input(f"\n{ask}Enter session or bot token of CLIENT3 or press enter: ")
-    if CLIENT3:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT3 {CLIENT3}")
-    CLIENT4 = input(f"\n{ask}Enter session or bot token of CLIENT4 or press enter: ")
-    if CLIENT4:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT4 {CLIENT4}")
-    CLIENT5 = input(f"\n{ask}Enter session or bot token of CLIENT5 or press enter: ")
-    if CLIENT5:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT5 {CLIENT5}")
-    CLIENT6 = input(f"\n{ask}Enter session or bot token of CLIENT6 or press enter: ")
-    if CLIENT6:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT6 {CLIENT6}")
-    CLIENT7 = input(f"\n{ask}Enter session or bot token of CLIENT7 or press enter: ")
-    if CLIENT7:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT7 {CLIENT7}")
-    CLIENT8 = input(f"\n{ask}Enter session or bot token of CLIENT8 or press enter: ")
-    if CLIENT8:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT8 {CLIENT8}")
-    CLIENT9 = input(f"\n{ask}Enter session or bot token of CLIENT9 or press enter: ")
-    if CLIENT9:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT9 {CLIENT9}")
-    CLIENT10 = input(f"\n{ask}Enter session or bot token of CLIENT10 or press enter: ")
-    if CLIENT10:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT10 {CLIENT10}")
-    CLIENT11 = input(f"\n{ask}Enter session or bot token of CLIENT11 or press enter: ")
-    if CLIENT11:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT11 {CLIENT11}")
-    CLIENT12 = input(f"\n{ask}Enter session or bot token of CLIENT12 or press enter: ")
-    if CLIENT12:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT12 {CLIENT12}")
-    CLIENT13 = input(f"\n{ask}Enter session or bot token of CLIENT13 or press enter: ")
-    if CLIENT13:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT13 {CLIENT13}")
-    CLIENT14 = input(f"\n{ask}Enter session or bot token of CLIENT14 or press enter: ")
-    if CLIENT14:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT14 {CLIENT14}")
-    CLIENT15 = input(f"\n{ask}Enter session or bot token of CLIENT15 or press enter: ")
-    if CLIENT15:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT15 {CLIENT15}")
-    CLIENT16 = input(f"\n{ask}Enter session or bot token of CLIENT16 or press enter: ")
-    if CLIENT16:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT16 {CLIENT16}")
-    CLIENT17 = input(f"\n{ask}Enter session or bot token of CLIENT17 or press enter: ")
-    if CLIENT17:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT17 {CLIENT17}")
-    CLIENT18 = input(f"\n{ask}Enter session or bot token of CLIENT18 or press enter: ")
-    if CLIENT18:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT18 {CLIENT18}")
-    CLIENT19 = input(f"\n{ask}Enter session or bot token of CLIENT19 or press enter: ")
-    if CLIENT19:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT19 {CLIENT19}")
-    CLIENT20 = input(f"\n{ask}Enter session or bot token of CLIENT20 or press enter: ")
-    if CLIENT20:
-        print(f"{bcyan}Got it! Fill next value")
-        os.system(f"dotenv set CLIENT20 {CLIENT20}")
-    database_url = input(f"\n{ask}Enter Postgres database url or press enter: ")
+        setupSpamX()
+
+    database_url = (input(f"\n{ask}Enter Mongo/Postgres database url: "))
     if database_url:
-        if 'postgresql' in database_url or 'postgres' in database_url:
-           print(f"{bcyan}Got it!")
-           os.system(f"dotenv set DATABASE_URL {database_url}")
+        if "mongodb" in database_url:
+            print(f"{bcyan}Got it!")
+            os.system(f"dotenv set DATABASE_URL {database_url}")
         else:
-           print(f"{error}Need Postgres database url, fill DATABASE_URL manually")
+            print(f"{error}Need Mongo or Postgres database url! restarting...")
+            time.sleep(2)
+            setupSpamX()
+    else:
+        print(f"{error}You have to fill this variable! all process restarting..")
+        time.sleep(2)
+        setupSpamX()
+
+    print(f"{bpurple}\n\nNow, next all variables are optional press enter if yiu don't wanna fill!\n")
+
+    cmd_hndlr = input(f"\n{ask}Enter HANDLER or press enter: ")
+    if cmd_hndlr:
+        print(f"{bcyan}Got it! Fill next value")
+        os.system(f"dotenv set HANDLER {cmd_hndlr}")
+    alive_media = input(f"\n{ask}Enter Alive media (telegraph link) or press enter: ")
+    if alive_media:
+        print(f"{bcyan}Got it!")
+        os.system(f"dotenv set ALIVE_MEDIA {alive_media}")
+    alive_msg = input(f"\n{ask}Enter Alive msg or press enter: ")
+    if alive_msg:
+        print(f"{bcyan}Got it!")
+        os.system(f"dotenv set ALIVE_MSG {alive_msg}")
+    ping_msg = input(f"\n{ask}Enter Ping msg or press enter: ")
+    if ping_msg:
+        print(f"{bcyan}Got it!")
+        os.system(f"dotenv set PING_MSG {ping_msg}")
+
     recheck()
 
 def recheck():
-    Recheck = input(f"\n{ask}Filled ALL Vars Correctly?: y/n: ")
-    if Recheck.lower() == "n":
+    confim = str(input(f"\n{ask}Filled ALL Vars Correctly?: y/n: "))
+    if confim.lower() == "n":
         os.system("clear")
         print(f"{info}Okay! Fill Your Vars Again")
-        SpamX_Setup()
-    elif Recheck.lower() == "y":
-        
+        setupSpamX()
+    elif confim.lower() == "y":
         get_start()
     else:
         print(f"\n{ask}Input Must Be Y or N")
@@ -250,11 +161,11 @@ def recheck():
 
 def get_start():
     clear(fast=True)
-    question = input(f"{ask}Wanna start SpamX Now?: y/n: ")
-    if question.lower() == "y":
+    confim = str(input(f"{ask}Wanna start SpamX Now?: y/n: "))
+    if confim.lower() == "y":
         os.system("pip3 install python-dotenv")
         os.system("python3 -m SpamX")
-    elif question.lower() == "n":
+    elif confim.lower() == "n":
         print(f"\n{info}Nevermind !! You Can Start It Later With by using; python3-m SpamX\n")
         exit(2)
     else:
