@@ -11,7 +11,7 @@ if start.lower() in ['y', 'yes']:
     check = x.read()
     lines = check.splitlines()
     x.close()
-    if not len(lines) == 30:
+    if not len(lines) == 11:
         os.system("rm -rf .env")
         y = open(".env", "w")
         y.write(evn_vars)
