@@ -127,10 +127,11 @@ async def raids(client: Client, message: Message):
         await TheSpamX.functions.replyraid(client, message, "disable")
 
 @Client.on_message(
-    filters.all & filters.user(TheSpamX.functions.raid_users)
+    filters.all
 )
 async def replayraid_watcher(_, message: Message):
-    await message.reply(random.choice(TheSpamX.functions.raid_args))
+    if message.from_user.id in TheSpamX.functions.raid_users:
+        await message.reply(random.choice(TheSpamX.functions.raid_args))
 
 @Client.on_message(
     filters.command("stop")
