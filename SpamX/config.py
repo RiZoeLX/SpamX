@@ -1,3 +1,4 @@
+import os
 from os import getenv as env
 from SpamX.functions.logger import LOGS
 from dotenv import load_dotenv
