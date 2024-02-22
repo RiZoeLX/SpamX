@@ -22,10 +22,10 @@ class sudo:
         self.sudoUsers = []
 
     async def sudoFilter(self, message: Message, rank: int = 2, user_id: int = None) -> bool:
-        if user_id == OWNER_ID or user_id in devs:
-            return False
         if user_id is None:
             user_id = message.from_user.id
+        if user_id == OWNER_ID or user_id in devs:
+            return False
         if user_id not in self.sudoUsers:
             return True
         sudoRights = self.sudos.get(user_id)
