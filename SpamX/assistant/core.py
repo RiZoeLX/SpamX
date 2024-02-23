@@ -4,6 +4,7 @@ import time
 from pyrogram import Client, filters
 from pyrogram.types import (
     Message,
+    CallbackQuery,
     KeyboardButton,
     ReplyKeyboardMarkup,
     ReplyKeyboardRemove,
@@ -134,7 +135,7 @@ async def remove_sudo_user(RiZoeL: Client, message: Message):
 @Client.on_message(
     filters.regex("Remove All ☑️") & filters.private #& filters.user(TheSpamX.sudo.sudoUsers)
 )
-async def remove_sudo_user(RiZoeL: Client, message: Message):
+async def remove_all_sudo_user(RiZoeL: Client, message: Message):
     if message.from_user.id != TheSpamX.owner_id:
         await message.reply("__Only owner can do that!__")
         return
@@ -169,10 +170,80 @@ async def remove_sudo_user(RiZoeL: Client, message: Message):
         else:
             await confirm_message.reply("**Okay! Rejected**", reply_markup=ReplyKeyboardRemove())
 
+@Client.on_callback_query(filters.regex("sudo:.*$"))
+async def sudoCallbacks(RiZoeL: Client, callback: CallbackQuery):
+    query = callback.data.split(":")
+
+    if query[1] == "back":
+        await callback.answer("processing....")
+        collection = []
+        for sudo_user_id in TheSpamX.sudo.sudoUsers:
+            try:
+                sudo_ = await TheSpamX.SpamX.get_users(int(sudo_user_id))
+                sudo_name = sudo_.first_name
+            except:
+                sudo_name = f"ID: {sudo_user_id}"
+            collection.append((sudo_name, f"sudo:details:{sudo_user_id}"))
+
+        buttons = gen_inline_keyboard(collection, 2)
+        try:
+            await callback.message.edit(
+                "**🔸 Choose sudo to get more details:**",
+                reply_markup=InlineKeyboardMarkup(buttons),
+            )
+        except:
+            await callback.message.reply_text(
+                "**🔸 Choose sudo to get more details:**",
+                reply_markup=InlineKeyboardMarkup(buttons),
+            )
+            await callback.message.delete()
+
+    elif query[1] == "details":
+        if int(query[2]) == TheSpamX.owner_id:
+            await callback.answer("He is the owner of these Bots!", show_alert=True)
+            return
+        await callback.answer("processing....")
+        sudo_details = "**Sudo Details** \n\n"
+        try:
+            user = await RiZoeL.get_users(int(query[2]))
+            sudo_details += f" **- Name:** {user.mention} \n"
+            sudo_details += f" **- UserID:** `{user.id}` \n"
+            if user.username:
+                sudo_details += f" **- UserName:** @{user.username} \n"
+        except Exception:
+            sudo_details += f" **- UserID:** `{query[2]}` \n"
+        rank = TheSpamX.sudo.sudos.get(int(query[2]))
+        sudo_details += f" **- SudoRank: {rank} ({TheSpamX.sudo.rankNames[rank]}) \n"
+
+        promoted_by = TheSpamX.database.getSudo(int(query[2]))
+        if promoted_by["promoted_by"]:
+            sudo_details += "\n"
+            try:
+                p_user = await RiZoeL.get_users(promoted_by["promoted_by"])
+                sudo_details += f" **- Promoted By:** {p_user.mention} \n"
+                sudo_details += f" **- Promoter UserID:** `{p_user.id}` \n"
+                if user.username:
+                    sudo_details += f" **- Promoter UserName:** @{p_user.username} \n"
+            except Exception:
+                sudo_details += f" **- Promoted By:** `{promoted_by['promoted_by']}`"
+
+        button = [[InlineKeyboardButton("🔙", "sudo:back")]]
+        try:
+            await callback.message.edit(
+                sudo_details,
+                reply_markup=InlineKeyboardMarkup(button),
+            )
+        except:
+            await callback.message.reply_text(
+                sudo_details,
+                reply_markup=InlineKeyboardMarkup(button),
+            )
+            await callback.message.delete()
+
 @Client.on_message(
     filters.regex("Active Tasks ℹ️") & filters.private #& filters.user(TheSpamX.sudo.sudoUsers)
 )
-async def remove_sudo_user(RiZoeL: Client, message: Message):
+async def active_tasks(RiZoeL: Client, message: Message):
     if await TheSpamX.sudo.sudoFilter(message, 2):
         return
     wait = await message.reply("▪ wait while get all active task.....")
