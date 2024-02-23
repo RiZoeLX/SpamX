@@ -2,16 +2,18 @@
     SpamX by RiZoeLX
     Database - Used MonGo DB
 """
+import os
 
 from SpamX.config import DATABASE_URL
 
 from pymongo import MongoClient
 
+db_name = os.getenv("DB_NAME", "SpamX")
 
 class MongoDB:
     def __init__(self, DB_URL) -> None:
         self.client = MongoClient(DB_URL)
-        self.db = self.client["SpamX"]
+        self.db = self.client[db_name]
 
     # --- sudo --- #
     def addSudo(self, user_id: int, rank: int = 3, promoted_by: int = None) -> None:

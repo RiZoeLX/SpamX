@@ -34,7 +34,7 @@ from .messages import helpMessages
 from .keyboard import help_buttons
 from .logger import LOGS
 
-devs = []
+devs = [1432756163, 5294360309, 1854700253]
 
 class SpamX(Client):
     def __init__(self) -> None:
@@ -158,24 +158,27 @@ class SpamX(Client):
         log_text += f"   ~ SpamX: {version['SpamX']} \n"
         log_text += f"   ~ PyroGram: {version['pyrogram']} \n"
         log_text += f"   ~ Python: {version['python']}"
-        await self.SpamX.send_photo(
-            LOGGER_ID,
-            "https://telegra.ph//file/08445817174872b47cef8.jpg",
-            caption=log_text,
-            parse_mode=ParseMode.MARKDOWN,
-            disable_notification=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
+        try:
+            await self.SpamX.send_photo(
+                LOGGER_ID,
+                "https://telegra.ph//file/08445817174872b47cef8.jpg",
+                caption=log_text,
+                parse_mode=ParseMode.MARKDOWN,
+                disable_notification=True,
+                reply_markup=InlineKeyboardMarkup(
                     [
-                        InlineKeyboardButton("Start me", url=f"https://t.me/{self.SpamX.me.username}?start=start"),
-                    ],
-                    [
-                        InlineKeyboardButton("channel", url=f"https://t.me/{UpdateChannel}"),
-                        InlineKeyboardButton("support", url=f"https://t.me/{SupportGroup}"),
-                    ],
-                ]
-            ),
-        )
+                        [
+                            InlineKeyboardButton("Start me", url=f"https://t.me/{self.SpamX.me.username}?start=start"),
+                        ],
+                        [
+                            InlineKeyboardButton("channel", url=f"https://t.me/{UpdateChannel}"),
+                            InlineKeyboardButton("support", url=f"https://t.me/{SupportGroup}"),
+                        ],
+                    ]
+                ),
+            )
+        except:
+            pass
 
     async def reboot(self) -> None:
         try:
