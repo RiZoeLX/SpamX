@@ -536,7 +536,7 @@ class help_functions:
             await message.reply(f"**✅ Already an active task in this chat;** __Task: {task['spam_type']}, started by: {task['started_by']}__")
             return
 
-        if await restriction.checkRestrictions(message) and message.from_user.id != OWNER_ID:
+        if await restriction.checkRestrictions(message):
             await message.reply("**🙃 Sorry, you cannot spam here!**")
             return
 
@@ -860,7 +860,7 @@ class help_functions:
             await message.reply(f"__✅ Raid completed on {user.mention} personally__")
 
     async def raid(self, client: Client, message: Message, multi: bool = False) -> None:
-        if await restriction.checkRestrictions(message) and message.from_user.id != OWNER_ID:
+        if await restriction.checkRestrictions(message):
             await message.reply("**🫡 Sorry, you cannot spam here!**")
             return
 
@@ -1055,7 +1055,7 @@ class help_functions:
             await message.reply("__This command is only for bot not for id 🤷__")
             return
 
-        if await restriction.checkRestrictions(message) and message.from_user.id != OWNER_ID:
+        if await restriction.checkRestrictions(message):
             await message.reply("**🫡 Sorry, you cannot spam here!**")
             return
 
