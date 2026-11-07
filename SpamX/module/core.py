@@ -19,7 +19,7 @@ async def broadcast(SpamX: Client, message: Message):
 async def join(SpamX: Client, message: Message):
     try:
         group = str(message.command[1])
-    except:
+    except IndexError:
         await message.reply("__Please give valid join link or username of group to join.__")
         return
 
@@ -40,7 +40,7 @@ async def leave(SpamX: Client, message: Message):
     else:
         try:
             group = message.command[1]
-        except:
+        except IndexError:
             await message.reply("__Please give valid join link or username of group to join.__")
             return
 
